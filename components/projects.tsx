@@ -1,25 +1,11 @@
 "use client";
 
-import React from "react";
 import SectionHeading from "./section-heading";
 import { projectsData } from "@/lib/data";
 import Project from "./project";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
-
-const introVariants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 90,
-      damping: 18,
-      delay: 0.1,
-    },
-  },
-};
+import { duration, ease, spring, viewportEnter } from "@/lib/motion";
 
 export default function Projects() {
   const { ref } = useSectionInView("Projects", 0.5);
@@ -31,22 +17,22 @@ export default function Projects() {
       className="mb-28 w-full max-w-6xl scroll-mt-28 sm:max-w-7xl"
     >
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ type: "spring", stiffness: 100, damping: 18 }}
+        initial={{ opacity: 0, y: 24, filter: "blur(6px)" }}
+        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        viewport={viewportEnter}
+        transition={{ duration: duration.slow, ease: ease.outExpo }}
       >
         <SectionHeading>My projects</SectionHeading>
       </motion.div>
 
       <motion.p
-        variants={introVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        className="-mt-4 mb-10 max-w-3xl mx-auto text-center text-gray-700 dark:text-white/70"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={viewportEnter}
+        transition={{ ...spring.soft, delay: 0.1 }}
+        className="-mt-4 mx-auto mb-10 max-w-3xl text-center text-gray-700 dark:text-white/70"
       >
-        Below, you'll find key projects that highlight my expertise and
+        Below, you&apos;ll find key projects that highlight my expertise and
         practical skills. Each project demonstrates my ability to handle complex
         challenges, use diverse technologies effectively, and manage projects
         proficiently.

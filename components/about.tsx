@@ -1,9 +1,16 @@
 "use client";
 
-import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
+import {
+  duration,
+  ease,
+  spring,
+  staggerContainer,
+  staggerItem,
+  viewportEnter,
+} from "@/lib/motion";
 
 export default function About() {
   const { ref } = useSectionInView("About");
@@ -11,44 +18,76 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
-      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.175 }}
       id="about"
+      className="mb-28 max-w-[45rem] scroll-mt-28 text-center leading-8 sm:mb-40"
+      initial={{ opacity: 0, y: 48, filter: "blur(8px)" }}
+      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      viewport={viewportEnter}
+      transition={{ duration: duration.slow, ease: ease.outExpo }}
     >
       <SectionHeading>About me</SectionHeading>
-      <p className="mb-3">
-        I'm a{" "}
-        <span className="font-medium">Software Developer</span> with over{" "}
-        <span className="font-medium">4+ years of experience</span> specializing
-        in cross-platform and native mobile development using{" "}
-        <span className="font-medium">
-          Flutter, React Native, Kotlin, Java, and Swift
-        </span>
-        . I build high-performance, user-friendly apps for Android and iOS that deliver seamless
-        experiences. My expertise also includes backend development with{" "}
-        <span className="font-medium">Node.js and MongoDB</span>, ensuring
-        robust and scalable solutions. Passionate about problem-solving and
-        clean code, I stay ahead of industry trends to create innovative,
-        impactful applications.
-      </p>
 
-      <p className="mb-3">
-        <span className="font-medium">Senior Software Engineer</span> ·{" "}
-        <span className="font-medium">Cross Platform App Developer</span> ·{" "}
-        <span className="font-medium">Node.js Developer</span> ·{" "}
-        <span className="font-medium">Full Stack Mobile Developer</span>
-      </p>
+      <motion.div
+        variants={staggerContainer(0.12, 0.1)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportEnter}
+        className="space-y-4"
+      >
+        <motion.p variants={staggerItem} className="mb-3">
+          Senior Mobile Engineer with{" "}
+          <span className="font-medium">4.5+ years</span> architecting and
+          delivering full-stack mobile solutions across{" "}
+          <span className="font-medium">
+            Flutter, React Native, native Android (Kotlin/Java), and native iOS
+            (Swift)
+          </span>
+          . Strong track record in mobile architecture and system design, building
+          scalable, high-performance applications used by thousands of end users
+          across SaaS, fintech, and health tech products. Hands-on expertise in{" "}
+          <span className="font-medium">REST/GraphQL API</span> integration,{" "}
+          <span className="font-medium">Firebase</span> and{" "}
+          <span className="font-medium">Supabase</span> backends,{" "}
+          <span className="font-medium">Node.js</span> and{" "}
+          <span className="font-medium">MongoDB</span>, and CI/CD automation —
+          paired with a consistent record of end-to-end delivery from architecture
+          through App Store and Google Play release. Experienced leading
+          engineering teams through code reviews, mentoring, and technical
+          decision-making, with a focus on clean, maintainable cross-platform and
+          native codebases.
+        </motion.p>
 
-      <p>
-        <span className="italic">My achievements include:</span> completing
-        Mobile App Development certification from Techlift (GC-IT) Bootcamp
-        (Aug 2021), participating in DAIRA'18 Speed Programming at FAST-NU,
-        AIRTECH'17 Mobile App Designing at Air University Islamabad, Riphah
-        speed programming at Junnon'18, organizing FUTSAL at Riphah Annual
-        Junnon'18, and serving as E-Gaming Head at Riphah Annual Olympiad'17.
-      </p>
+        <motion.p
+          variants={staggerItem}
+          className="mb-3 flex flex-wrap items-center justify-center gap-2"
+        >
+          {[
+            "Senior Software Engineer",
+            "Cross Platform App Developer",
+            "Node.js Developer",
+            "Full Stack Mobile Developer",
+          ].map((role) => (
+            <motion.span
+              key={role}
+              whileHover={{ y: -3, scale: 1.04 }}
+              transition={spring.snappy}
+              className="glass-surface rounded-full px-3 py-1 text-sm font-medium"
+            >
+              {role}
+            </motion.span>
+          ))}
+        </motion.p>
+
+        <motion.p variants={staggerItem}>
+          <span className="italic">My achievements include:</span> completing
+          Mobile App Development certification from Techlift (GC-IT) Bootcamp
+          (Aug 2021), participating in DAIRA&apos;18 Speed Programming at FAST-NU,
+          AIRTECH&apos;17 Mobile App Designing at Air University Islamabad, Riphah
+          speed programming at Junnon&apos;18, organizing FUTSAL at Riphah Annual
+          Junnon&apos;18, and serving as E-Gaming Head at Riphah Annual
+          Olympiad&apos;17.
+        </motion.p>
+      </motion.div>
     </motion.section>
   );
 }

@@ -1,27 +1,34 @@
 "use client";
 
-import React from "react";
 import SectionHeading from "./section-heading";
 import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
+import { spring, viewportEnter } from "@/lib/motion";
+import Magnetic from "@/components/motion/magnetic";
 
 const fadeInAnimationVariants = {
   initial: {
     opacity: 0,
-    y: 100,
+    y: 36,
+    filter: "blur(6px)",
+    scale: 0.94,
   },
   animate: (index: number) => ({
     opacity: 1,
     y: 0,
+    filter: "blur(0px)",
+    scale: 1,
     transition: {
-      delay: 0.05 * index,
+      ...spring.gentle,
+      delay: 0.04 * index,
     },
   }),
 };
 
 export default function Skills() {
   const { ref } = useSectionInView("Skills");
+  const preferReduced = useReducedMotion();
 
   return (
     <section
@@ -33,17 +40,27 @@ export default function Skills() {
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
         {skillsData.map((skill, index) => (
           <motion.li
-            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
             key={index}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
-            viewport={{
-              once: true,
-            }}
+            viewport={viewportEnter}
             custom={index}
+            className="list-none"
           >
-            {skill}
+            <Magnetic strength={preferReduced ? 0 : 0.22}>
+              <motion.span
+                className="glass-surface inline-block rounded-xl px-5 py-3 dark:text-white/80"
+                whileHover={{
+                  scale: 1.07,
+                  rotate: index % 2 === 0 ? 2.5 : -2.5,
+                  y: -3,
+                }}
+                transition={spring.snappy}
+              >
+                {skill}
+              </motion.span>
+            </Magnetic>
           </motion.li>
         ))}
       </ul>

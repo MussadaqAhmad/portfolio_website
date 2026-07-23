@@ -1,18 +1,45 @@
 "use client";
 
 import { useTheme } from "@/context/theme-context";
-import React from "react";
 import { BsMoon, BsSun } from "react-icons/bs";
+import { motion, AnimatePresence } from "framer-motion";
+import { spring } from "@/lib/motion";
+import { useMagnetic } from "@/lib/motion-hooks";
+import { useReducedMotion } from "framer-motion";
 
 export default function ThemeSwitch() {
   const { theme, toggleTheme } = useTheme();
+  const preferReduced = useReducedMotion();
+  const { ref, offset, onMove, onLeave } = useMagnetic<HTMLButtonElement>(
+    0.35,
+    !preferReduced
+  );
 
   return (
-    <button
-      className="fixed bottom-5 right-5 bg-white w-[3rem] h-[3rem] bg-opacity-80 backdrop-blur-[0.5rem] border border-white border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950"
+    <motion.button
+      ref={ref}
+      className="fixed bottom-5 right-5 z-[999] flex h-[3rem] w-[3rem] items-center justify-center rounded-full border border-white border-opacity-40 bg-white bg-opacity-80 shadow-2xl backdrop-blur-[0.5rem] dark:bg-gray-950"
       onClick={toggleTheme}
+      onMouseMove={onMove}
+      onMouseLeave={onLeave}
+      animate={{ x: offset.x, y: offset.y }}
+      whileHover={{ scale: 1.12 }}
+      whileTap={{ scale: 0.95, rotate: 20 }}
+      transition={spring.magnetic}
+      aria-label="Toggle color theme"
     >
-      {theme === "light" ? <BsSun /> : <BsMoon />}
-    </button>
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.span
+          key={theme}
+          initial={{ opacity: 0, rotate: -40, scale: 0.6 }}
+          animate={{ opacity: 1, rotate: 0, scale: 1 }}
+          exit={{ opacity: 0, rotate: 40, scale: 0.6 }}
+          transition={{ duration: 0.25 }}
+          className="inline-flex"
+        >
+          {theme === "light" ? <BsSun /> : <BsMoon />}
+        </motion.span>
+      </AnimatePresence>
+    </motion.button>
   );
 }

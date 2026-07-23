@@ -4,12 +4,303 @@
 
 html {
   --line-color: #e5e7eb;
+  --glass-bg: rgba(255, 255, 255, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.45);
+  --glass-shine: rgba(255, 255, 255, 0.55);
+  --glow: rgba(219, 215, 251, 0.45);
 }
 
 html.dark {
   --line-color: rgba(255, 255, 255, 0.2);
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-shine: rgba(255, 255, 255, 0.18);
+  --glow: rgba(103, 99, 148, 0.35);
 }
 
 .borderBlack {
   @apply border border-black/10;
+}
+
+/* ── Liquid glass ─────────────────────────────────────────── */
+.glass-surface {
+  position: relative;
+  background: var(--glass-bg);
+  backdrop-filter: blur(18px) saturate(1.35);
+  -webkit-backdrop-filter: blur(18px) saturate(1.35);
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.06),
+    0 1px 0 rgba(255, 255, 255, 0.4) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.04) inset;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+html.dark .glass-surface {
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.35),
+    0 1px 0 rgba(255, 255, 255, 0.1) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.2) inset;
+}
+
+.glass-surface::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 20%,
+    var(--glass-shine) 45%,
+    transparent 70%
+  );
+  background-size: 220% 100%;
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+
+.glass-surface:hover::before,
+.glass-surface[data-active="true"]::before {
+  opacity: 0.55;
+  animation: glassShine 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.glass-border-glow {
+  position: relative;
+}
+
+.glass-border-glow::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(251, 226, 227, 0.7),
+    rgba(219, 215, 251, 0.5),
+    rgba(199, 210, 254, 0.4),
+    rgba(251, 226, 227, 0.3)
+  );
+  background-size: 300% 300%;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: borderShift 8s ease infinite;
+}
+
+.glass-border-glow:hover::after,
+.group:hover .glass-border-glow::after {
+  opacity: 1;
+}
+
+/* ── Continuous floats (CSS — cheaper than JS) ────────────── */
+@keyframes floatY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(12px, -18px) scale(1.03);
+  }
+  66% {
+    transform: translate(-10px, 10px) scale(0.98);
+  }
+}
+
+@keyframes floatOrb {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(30px, -40px) rotate(8deg);
+  }
+}
+
+@keyframes aurora {
+  0%,
+  100% {
+    transform: translateX(-8%) rotate(0deg) scale(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translateX(8%) rotate(3deg) scale(1.05);
+    opacity: 0.7;
+  }
+}
+
+@keyframes particleDrift {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(20px);
+    opacity: 0;
+  }
+}
+
+@keyframes glassShine {
+  0% {
+    background-position: 120% 0;
+  }
+  100% {
+    background-position: -40% 0;
+  }
+}
+
+@keyframes borderShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes meshShift {
+  0%,
+  100% {
+    background-position: 0% 40%;
+  }
+  50% {
+    background-position: 100% 60%;
+  }
+}
+
+@keyframes ringSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(1.04);
+  }
+}
+
+.animate-float {
+  animation: floatY 5.5s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 18s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatY 7s ease-in-out 1.2s infinite;
+}
+
+.animate-orb {
+  animation: floatOrb 22s ease-in-out infinite;
+}
+
+.animate-aurora {
+  animation: aurora 16s ease-in-out infinite;
+}
+
+.animate-mesh {
+  background-size: 200% 200%;
+  animation: meshShift 20s ease infinite;
+}
+
+.animate-ring {
+  animation: ringSpin 28s linear infinite;
+}
+
+.animate-glow-pulse {
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+/* ── Noise overlay ────────────────────────────────────────── */
+.noise-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+html.dark .noise-overlay {
+  opacity: 0.05;
+}
+
+/* ── Button live feel ─────────────────────────────────────── */
+.btn-alive {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    background 0.4s ease;
+}
+
+.btn-alive::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at var(--mx, 50%) var(--my, 50%),
+    rgba(255, 255, 255, 0.22),
+    transparent 55%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.btn-alive:hover::after {
+  opacity: 1;
+}
+
+/* ── Reduced motion ───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-float-slow,
+  .animate-float-delayed,
+  .animate-orb,
+  .animate-aurora,
+  .animate-mesh,
+  .animate-ring,
+  .animate-glow-pulse,
+  .glass-surface::before {
+    animation: none !important;
+  }
+
+  .noise-overlay {
+    display: none;
+  }
 }
