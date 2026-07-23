@@ -19,30 +19,35 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        After graduating with a degree in{" "}
-        <span className="font-medium">Accounting</span>, I decided to pursue my
-        passion for programming. I enrolled in a coding bootcamp and learned{" "}
-        <span className="font-medium">full-stack web development</span>.{" "}
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem. My core stack
-        is{" "}
+        I'm a{" "}
+        <span className="font-medium">Software Developer</span> with over{" "}
+        <span className="font-medium">4+ years of experience</span> specializing
+        in cross-platform and native mobile development using{" "}
         <span className="font-medium">
-          React, Next.js, Node.js, and MongoDB
+          Flutter, React Native, Kotlin, Java, and Swift
         </span>
-        . I am also familiar with TypeScript and Prisma. I am always looking to
-        learn new technologies. I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
-        developer.
+        . I build high-performance, user-friendly apps for Android and iOS that deliver seamless
+        experiences. My expertise also includes backend development with{" "}
+        <span className="font-medium">Node.js and MongoDB</span>, ensuring
+        robust and scalable solutions. Passionate about problem-solving and
+        clean code, I stay ahead of industry trends to create innovative,
+        impactful applications.
+      </p>
+
+      <p className="mb-3">
+        <span className="font-medium">Senior Software Engineer</span> ·{" "}
+        <span className="font-medium">Cross Platform App Developer</span> ·{" "}
+        <span className="font-medium">Node.js Developer</span> ·{" "}
+        <span className="font-medium">Full Stack Mobile Developer</span>
       </p>
 
       <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing
-        video games, watching movies, and playing with my dog. I also enjoy{" "}
-        <span className="font-medium">learning new things</span>. I am currently
-        learning about{" "}
-        <span className="font-medium">history and philosophy</span>. I'm also
-        learning how to play the guitar.
+        <span className="italic">My achievements include:</span> completing
+        Mobile App Development certification from Techlift (GC-IT) Bootcamp
+        (Aug 2021), participating in DAIRA'18 Speed Programming at FAST-NU,
+        AIRTECH'17 Mobile App Designing at Air University Islamabad, Riphah
+        speed programming at Junnon'18, organizing FUTSAL at Riphah Annual
+        Junnon'18, and serving as E-Gaming Head at Riphah Annual Olympiad'17.
       </p>
     </motion.section>
   );

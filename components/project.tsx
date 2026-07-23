@@ -1,71 +1,171 @@
 "use client";
 
-import { useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
-type ProjectProps = (typeof projectsData)[number];
+type ProjectProps = (typeof projectsData)[number] & {
+  index: number;
+};
+
+const cardVariants = {
+  hidden: {
+    opacity: 0,
+    y: 48,
+    scale: 0.92,
+  },
+  visible: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 80,
+      damping: 16,
+      delay: index * 0.08,
+    },
+  }),
+};
+
+const tagContainerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.06,
+      delayChildren: 0.15,
+    },
+  },
+};
+
+const tagVariants = {
+  hidden: {
+    opacity: 0,
+    y: 10,
+    scale: 1,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 260,
+      damping: 20,
+    },
+  },
+  hover: {
+    scale: 1.08,
+    y: -2,
+    transition: {
+      type: "spring",
+      stiffness: 400,
+      damping: 22,
+    },
+  },
+};
 
 export default function Project({
   title,
   description,
   tags,
   imageUrl,
+  index,
 }: ProjectProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "1.33 1"],
-  });
-  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const visibleTags = tags.slice(0, 4);
+  const remainingTags = tags.length - visibleTags.length;
 
   return (
-    <motion.div
-      ref={ref}
-      style={{
-        scale: scaleProgess,
-        opacity: opacityProgess,
+    <motion.article
+      custom={index}
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-40px" }}
+      whileHover={{
+        y: -8,
+        transition: { type: "spring", stiffness: 300, damping: 22 },
       }}
-      className="group mb-3 sm:mb-8 last:mb-0"
+      whileTap={{ scale: 0.98 }}
+      className="group relative flex h-full cursor-default flex-col overflow-hidden rounded-xl border border-black/5 bg-gray-100 shadow-sm transition-shadow duration-300 hover:border-black/10 hover:shadow-xl hover:shadow-black/10 dark:bg-white/10 dark:hover:border-white/10 dark:hover:shadow-black/30"
     >
-      <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-          <h3 className="text-2xl font-semibold">{title}</h3>
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
-            {description}
-          </p>
-          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
-            {tags.map((tag, index) => (
-              <li
-                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
-                key={index}
-              >
-                {tag}
-              </li>
-            ))}
-          </ul>
-        </div>
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 rounded-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+        style={{
+          background:
+            "radial-gradient(circle at top, rgba(255,255,255,0.18), transparent 55%)",
+        }}
+      />
 
-        <Image
-          src={imageUrl}
-          alt="Project I worked on"
-          quality={95}
-          className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
-        transition 
-        group-hover:scale-[1.04]
-        group-hover:-translate-x-3
-        group-hover:translate-y-3
-        group-hover:-rotate-2
+      <div className="relative aspect-[16/10] overflow-hidden">
+        <motion.div
+          className="absolute inset-0"
+          whileHover={{ scale: 1.08 }}
+          transition={{ type: "spring", stiffness: 180, damping: 22 }}
+        >
+          <Image
+            src={imageUrl}
+            alt={`${title} project screenshot`}
+            fill
+            quality={90}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover object-top"
+          />
+        </motion.div>
 
-        group-even:group-hover:translate-x-3
-        group-even:group-hover:translate-y-3
-        group-even:group-hover:rotate-2
-
-        group-even:right-[initial] group-even:-left-40"
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileHover={{ opacity: 1 }}
+          className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         />
-      </section>
-    </motion.div>
+      </div>
+
+      <div className="relative flex flex-1 flex-col p-5">
+        <motion.h3
+          className="text-lg font-semibold sm:text-xl"
+          whileHover={{ x: 4 }}
+          transition={{ type: "spring", stiffness: 400, damping: 25 }}
+        >
+          {title}
+        </motion.h3>
+
+        <motion.p
+          initial={{ opacity: 0.85 }}
+          whileHover={{ opacity: 1 }}
+          className="mt-2 flex-1 text-sm leading-relaxed text-gray-700 line-clamp-3 dark:text-white/70"
+        >
+          {description}
+        </motion.p>
+
+        <motion.ul
+          className="mt-4 flex flex-wrap gap-2"
+          variants={tagContainerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {visibleTags.map((tag, tagIndex) => (
+            <motion.li
+              custom={tagIndex}
+              variants={tagVariants}
+              whileHover="hover"
+              className="rounded-full bg-black/[0.7] px-2.5 py-1 text-[0.65rem] uppercase tracking-wider text-white dark:text-white/80"
+              key={tagIndex}
+            >
+              {tag}
+            </motion.li>
+          ))}
+          {remainingTags > 0 && (
+            <motion.li
+              variants={tagVariants}
+              whileHover="hover"
+              className="rounded-full bg-black/[0.45] px-2.5 py-1 text-[0.65rem] uppercase tracking-wider text-white dark:text-white/80"
+            >
+              +{remainingTags}
+            </motion.li>
+          )}
+        </motion.ul>
+      </div>
+    </motion.article>
   );
 }
