@@ -145,7 +145,7 @@ export default function Intro() {
       >
         <a
           className="flex h-11 w-11 items-center justify-center rounded-full borderBlack bg-white/80 text-lg text-gray-600 shadow-sm backdrop-blur-sm transition hover:scale-105 hover:text-gray-950 dark:bg-white/10 dark:text-gray-300 dark:hover:text-white"
-          href="https://www.linkedin.com/in/mussadaq-ahmad-jamil-76119814a/"
+          href="https://www.linkedin.com/in/mussadaq-ahmad-jamil/"
           target="_blank"
           rel="noreferrer"
           aria-label="LinkedIn profile"
