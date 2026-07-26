@@ -11,7 +11,7 @@ export default function SectionHeading({ children }: SectionHeadingProps) {
     <TextReveal
       as="h2"
       mode="words"
-      className="mb-8 text-center text-3xl font-medium capitalize"
+      className="font-display mb-8 text-center text-3xl font-bold tracking-tight capitalize text-gray-950 sm:text-4xl dark:text-[#F5F5F5]"
     >
       {children}
     </TextReveal>

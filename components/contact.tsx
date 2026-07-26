@@ -15,7 +15,7 @@ export default function Contact() {
     <motion.section
       id="contact"
       ref={ref}
-      className="mb-20 w-[min(100%,38rem)] text-center sm:mb-28"
+      className="dark-contact-mesh dark-band dark-band-alt mb-20 w-[min(100%,38rem)] text-center sm:mb-28"
       initial={{ opacity: 0, y: 40, filter: "blur(8px)" }}
       whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
       transition={{ duration: duration.cinematic, ease: ease.outExpo }}
@@ -28,10 +28,13 @@ export default function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={viewportEnter}
         transition={{ ...spring.soft, delay: 0.1 }}
-        className="-mt-6 text-gray-700 dark:text-white/80"
+        className="-mt-6 text-gray-700 dark:text-[#A1A1AA]"
       >
         Please contact me directly at{" "}
-        <a className="underline" href="mailto:mussadaq900@gmail.com">
+        <a
+          className="underline decoration-zinc-400/60 underline-offset-2 transition hover:text-gray-950 dark:text-[#F5F5F5] dark:decoration-white/25 dark:hover:text-white"
+          href="mailto:mussadaq900@gmail.com"
+        >
           mussadaq900@gmail.com
         </a>{" "}
         or through this form.
@@ -42,9 +45,9 @@ export default function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={viewportEnter}
         transition={{ ...spring.gentle, delay: 0.15 }}
-        className="glass-surface mt-10 flex flex-col rounded-2xl p-5 dark:text-black sm:p-6"
+        className="glass-surface mt-10 flex flex-col rounded-2xl p-5 sm:p-6"
         action={async (formData) => {
-          const { data, error } = await sendEmail(formData);
+          const { error } = await sendEmail(formData);
 
           if (error) {
             toast.error(error);
@@ -55,7 +58,7 @@ export default function Contact() {
         }}
       >
         <input
-          className="h-14 rounded-lg borderBlack bg-white/70 px-4 backdrop-blur-sm transition-all focus:scale-[1.01] focus:shadow-md dark:bg-white dark:bg-opacity-80 dark:outline-none dark:focus:bg-opacity-100"
+          className="h-14 rounded-lg borderBlack bg-white/70 px-4 text-gray-900 placeholder:text-gray-500 backdrop-blur-sm transition-all focus:scale-[1.01] focus:shadow-md dark:border-white/[0.06] dark:bg-[#1B1B1B] dark:text-[#F5F5F5] dark:placeholder:text-[#71717A] dark:outline-none dark:focus:border-white/15 dark:focus:bg-[#1B1B1B] dark:focus:shadow-none dark:focus:scale-100"
           name="senderEmail"
           type="email"
           required
@@ -63,7 +66,7 @@ export default function Contact() {
           placeholder="Your email"
         />
         <textarea
-          className="my-3 h-52 rounded-lg borderBlack bg-white/70 p-4 backdrop-blur-sm transition-all focus:scale-[1.01] focus:shadow-md dark:bg-white dark:bg-opacity-80 dark:outline-none dark:focus:bg-opacity-100"
+          className="my-3 h-52 rounded-lg borderBlack bg-white/70 p-4 text-gray-900 placeholder:text-gray-500 backdrop-blur-sm transition-all focus:scale-[1.01] focus:shadow-md dark:border-white/[0.06] dark:bg-[#1B1B1B] dark:text-[#F5F5F5] dark:placeholder:text-[#71717A] dark:outline-none dark:focus:border-white/15 dark:focus:bg-[#1B1B1B] dark:focus:shadow-none dark:focus:scale-100"
           name="message"
           placeholder="Your message"
           required
