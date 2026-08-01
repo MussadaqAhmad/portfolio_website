@@ -18,10 +18,10 @@
 html {
   --angle: 0deg;
 
-  --accent: #6366f1;
-  --accent-rgb: 99, 102, 241;
-  --accent-secondary: #8b5cf6;
-  --accent-secondary-rgb: 139, 92, 246;
+  --accent: #9333ea;
+  --accent-rgb: 147, 51, 234;
+  --accent-secondary: #6a2fb4;
+  --accent-secondary-rgb: 106, 47, 180;
 
   --text-primary: #0a0a0a;
   --text-secondary: #3f3f46;
@@ -47,12 +47,18 @@ html {
   --chip-bg: rgba(var(--accent-rgb), 0.08);
   --chip-border: rgba(var(--accent-rgb), 0.22);
   --chip-text: #3f3f46;
+  --skill-card-bg: rgba(255, 255, 255, 0.9);
+  --skill-card-border: rgba(var(--accent-rgb), 0.65);
+  --skill-card-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
 
-  --nav-bg: rgba(255, 255, 255, 0.82);
-  --nav-border: rgba(var(--accent-rgb), 0.14);
+  --nav-bg: rgba(255, 255, 255, 0.9);
+  --nav-border: rgba(var(--accent-rgb), 0.2);
   --nav-shadow:
-    0 8px 32px rgba(15, 23, 42, 0.06),
+    0 8px 32px rgba(15, 23, 42, 0.1),
     inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  --nav-link: #52525b;
+  --nav-link-hover: #0a0a0a;
+  --nav-link-active: var(--accent-secondary);
 
   --cta-secondary-bg: rgba(255, 255, 255, 0.75);
   --cta-secondary-text: #18181b;
@@ -99,10 +105,10 @@ html {
 
 /* ── Dark theme: same design, neon violet palette ─────────── */
 html.dark {
-  --accent: #a855f7;
-  --accent-rgb: 168, 85, 247;
-  --accent-secondary: #c084fc;
-  --accent-secondary-rgb: 192, 132, 252;
+  --accent: #9333ea;
+  --accent-rgb: 147, 51, 234;
+  --accent-secondary: #6a2fb4;
+  --accent-secondary-rgb: 106, 47, 180;
 
   --text-primary: #ffffff;
   --text-secondary: #d1d5db;
@@ -128,12 +134,18 @@ html.dark {
   --chip-bg: rgba(255, 255, 255, 0.06);
   --chip-border: rgba(var(--accent-rgb), 0.25);
   --chip-text: #d1d5db;
+  --skill-card-bg: rgba(18, 18, 21, 0.92);
+  --skill-card-border: rgba(var(--accent-rgb), 0.55);
+  --skill-card-shadow: 0 12px 30px rgba(0, 0, 0, 0.32);
 
-  --nav-bg: rgba(15, 15, 15, 0.7);
-  --nav-border: rgba(255, 255, 255, 0.08);
+  --nav-bg: rgba(12, 12, 14, 0.88);
+  --nav-border: rgba(var(--accent-rgb), 0.22);
   --nav-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.4),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+    0 8px 32px rgba(0, 0, 0, 0.55),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  --nav-link: #b4b4bd;
+  --nav-link-hover: #ffffff;
+  --nav-link-active: #ffffff;
 
   --cta-secondary-bg: rgba(255, 255, 255, 0.03);
   --cta-secondary-text: #ffffff;
@@ -149,7 +161,7 @@ html.dark {
     transparent 70%
   );
   --blob-a: rgba(var(--accent-rgb), 0.1);
-  --blob-b: rgba(124, 58, 237, 0.09);
+  --blob-b: rgba(var(--accent-secondary-rgb), 0.09);
   --blob-c: rgba(var(--accent-secondary-rgb), 0.07);
   --blob-d: rgba(var(--accent-rgb), 0.08);
   --side-depth: radial-gradient(
@@ -159,7 +171,7 @@ html.dark {
     ),
     radial-gradient(
       ellipse 40% 50% at 100% 50%,
-      rgba(124, 58, 237, 0.045),
+      rgba(var(--accent-secondary-rgb), 0.045),
       transparent 60%
     );
   --vignette: radial-gradient(
@@ -363,6 +375,469 @@ h3,
   color: var(--text-primary);
 }
 
+/* ── About role pills ─────────────────────────────────────── */
+.about-role-chip {
+  color: var(--accent);
+  background: linear-gradient(
+    135deg,
+    rgba(var(--accent-rgb), 0.1),
+    rgba(var(--accent-secondary-rgb), 0.06)
+  );
+  border: 1px solid rgba(var(--accent-rgb), 0.3);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    0 5px 15px rgba(var(--accent-rgb), 0.07);
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.about-role-chip:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    0 10px 24px rgba(var(--accent-rgb), 0.18),
+    0 0 18px rgba(var(--accent-rgb), 0.1);
+}
+
+.dark .about-role-chip {
+  color: #eeeaf4;
+  background: linear-gradient(
+    135deg,
+    rgba(var(--accent-rgb), 0.13),
+    rgba(var(--accent-secondary-rgb), 0.1)
+  );
+  border-color: rgba(var(--accent-rgb), 0.34);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.045),
+    0 5px 15px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 8px rgba(255, 255, 255, 0.08);
+}
+
+.dark .about-role-chip svg {
+  color: var(--accent);
+  filter: drop-shadow(0 0 7px rgba(var(--accent-rgb), 0.45));
+}
+
+.dark .about-role-chip:hover {
+  color: #eeeaf4;
+  background: linear-gradient(
+    135deg,
+    rgba(var(--accent-rgb), 0.13),
+    rgba(var(--accent-secondary-rgb), 0.1)
+  );
+  border-color: rgba(var(--accent-rgb), 0.34);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.045),
+    0 10px 24px rgba(0, 0, 0, 0.28),
+    0 0 18px rgba(var(--accent-rgb), 0.14);
+}
+
+/* ── Section headers ──────────────────────────────────────────
+   Two-part title: a bold lead followed by a lighter tagline, sitting
+   under a small accent eyebrow. Shared by every section so the
+   rhythm stays identical across old and new content. */
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.section-eyebrow::before,
+.section-eyebrow::after {
+  content: "";
+  width: 1.25rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent));
+}
+
+.section-eyebrow::after {
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.section-title-lead {
+  color: var(--text-primary);
+}
+
+.section-title-tail {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ── Category filter tabs ─────────────────────────────────── */
+.filter-tab {
+  position: relative;
+  background: var(--chip-bg);
+  border: 1px solid var(--chip-border);
+  color: var(--text-muted);
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.filter-tab:hover {
+  color: var(--text-primary);
+  border-color: rgba(var(--accent-rgb), 0.45);
+}
+
+.filter-tab[aria-selected="true"] {
+  color: #ffffff;
+  border-color: rgba(var(--accent-rgb), 0.7);
+  background: linear-gradient(
+    135deg,
+    var(--accent),
+    var(--accent-secondary)
+  );
+  box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.3);
+}
+
+.filter-tab:focus-visible,
+.overlay-cta:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ── Card media frame ─────────────────────────────────────────
+   The compositing hint is load-bearing: the image inside scales on hover,
+   which promotes it to its own layer, and Chrome then clips that layer to
+   this element's rectangle while ignoring the radius — so the image's square
+   corners bleed over the rounded frame. Giving the frame its own layer makes
+   the rounded clip apply again. */
+.card-media {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 1rem;
+  transform: translateZ(0);
+  isolation: isolate;
+}
+
+/* ── Project card hover overlay ───────────────────────────── */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  text-align: center;
+  /* Deliberately no backdrop-filter: its blur samples past the element's own
+     bounds, leaving a light fringe along the edges. The opaque gradient gives
+     the buttons enough contrast on its own. */
+  background: linear-gradient(
+    180deg,
+    rgba(9, 9, 11, 0.72),
+    rgba(9, 9, 11, 0.92)
+  );
+  opacity: 0;
+  /* Invisible until revealed, so it must not swallow clicks. Keyboard focus
+     still works — pointer-events does not affect tab order. */
+  pointer-events: none;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .card-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Kept as its own rule, not merged above: browsers without `:has()` would
+   otherwise discard the hover rule too. `:focus-visible` rather than
+   `:focus-within` so a mouse click on a store link does not pin the overlay
+   open after the pointer leaves — keyboard focus still reveals it. */
+.group:has(:focus-visible) .card-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Touch devices can never hover, so the overlay is dropped entirely there and
+   the same links render inline instead (see .store-links-touch). */
+@media (hover: none) {
+  .card-overlay {
+    display: none;
+  }
+}
+
+.store-links-touch {
+  display: flex;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .store-links-touch {
+    display: none;
+  }
+}
+
+.card-overlay > * {
+  transform: translateY(8px);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .card-overlay > * {
+  transform: translateY(0);
+}
+
+.group:has(:focus-visible) .card-overlay > * {
+  transform: translateY(0);
+}
+
+.overlay-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+  border: 1px solid rgba(var(--accent-rgb), 0.6);
+  box-shadow: 0 0 22px rgba(var(--accent-rgb), 0.4);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.overlay-cta:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 0 32px rgba(var(--accent-rgb), 0.6);
+}
+
+.overlay-note {
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.overlay-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* ── Store links (Google Play / App Store) ────────────────── */
+.store-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--chip-text);
+  background: var(--chip-bg);
+  border: 1px solid var(--chip-border);
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.store-chip:hover {
+  color: var(--text-primary);
+  background: rgba(var(--accent-rgb), 0.14);
+  border-color: rgba(var(--accent-rgb), 0.45);
+  transform: translateY(-2px);
+}
+
+.store-chip:focus-visible,
+.disclosure-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Same pill, sitting on the dark image overlay. */
+.store-chip-overlay {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.store-chip-overlay:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+  border-color: rgba(var(--accent-rgb), 0.7);
+  box-shadow: 0 0 22px rgba(var(--accent-rgb), 0.5);
+}
+
+/* ── Description disclosure toggle ────────────────────────── */
+.disclosure-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  flex-shrink: 0;
+  border-radius: 9999px;
+  color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.1);
+  border: 1px solid rgba(var(--accent-rgb), 0.28);
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.3s ease;
+}
+
+.disclosure-btn:hover {
+  background: rgba(var(--accent-rgb), 0.2);
+  border-color: rgba(var(--accent-rgb), 0.5);
+}
+
+.disclosure-btn svg {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.disclosure-btn[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+/* Accent bar to the left of a card title. */
+.title-bar {
+  display: inline-block;
+  width: 3px;
+  border-radius: 9999px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-secondary));
+}
+
+/* ── Numbered experience timeline ─────────────────────────── */
+.timeline-rail {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 1.25rem;
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(var(--accent-rgb), 0.35) 8%,
+    rgba(var(--accent-rgb), 0.55) 50%,
+    rgba(var(--accent-rgb), 0.35) 92%,
+    transparent 100%
+  );
+  box-shadow: 0 0 16px rgba(var(--accent-rgb), 0.28);
+}
+
+.timeline-marker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+  box-shadow:
+    0 0 0 4px var(--timeline-icon-ring),
+    0 0 20px rgba(var(--accent-rgb), 0.4);
+}
+
+/* Company logo tile on experience cards. */
+.logo-tile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 0.85rem;
+  background: #ffffff;
+  border: 1px solid rgba(var(--accent-rgb), 0.3);
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.14),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+}
+
+.date-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.1);
+  border: 1px solid rgba(var(--accent-rgb), 0.28);
+}
+
+.dark .cert-date-badge {
+  color: #eeeaf4;
+  background: linear-gradient(
+    135deg,
+    rgba(var(--accent-rgb), 0.13),
+    rgba(var(--accent-secondary-rgb), 0.1)
+  );
+  border-color: rgba(var(--accent-rgb), 0.34);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.045),
+    0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dark .cert-date-badge svg {
+  color: var(--accent);
+  filter: drop-shadow(0 0 6px rgba(var(--accent-rgb), 0.4));
+}
+
+.dark .project-tech-chip {
+  color: #eeeaf4;
+  background: linear-gradient(
+    135deg,
+    rgba(var(--accent-rgb), 0.13),
+    rgba(var(--accent-secondary-rgb), 0.1)
+  );
+  border-color: rgba(var(--accent-rgb), 0.34);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.045);
+}
+
+.dark .project-tech-chip:hover {
+  color: #eeeaf4;
+  background: linear-gradient(
+    135deg,
+    rgba(var(--accent-rgb), 0.13),
+    rgba(var(--accent-secondary-rgb), 0.1)
+  );
+  border-color: rgba(var(--accent-rgb), 0.34);
+}
+
+/* ── Elevated card (certs, packages, experience) ──────────── */
+.card-lift {
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+}
+
+.stat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
 /* ── Navbar ───────────────────────────────────────────────── */
 .nav-shell {
   background: var(--nav-bg) !important;
@@ -407,51 +882,43 @@ h3,
   animation: navIndicatorPulse 2.4s ease-in-out infinite;
 }
 
-/* ── Experience timeline ──────────────────────────────────── */
-.vertical-timeline::before {
-  background: linear-gradient(
-    180deg,
-    transparent 0%,
-    rgba(var(--accent-rgb), 0.3) 12%,
-    rgba(var(--accent-rgb), 0.5) 50%,
-    rgba(var(--accent-rgb), 0.3) 88%,
-    transparent 100%
-  ) !important;
-  width: 2px !important;
-  box-shadow: 0 0 16px rgba(var(--accent-rgb), 0.3);
+/* Nav links: readable at rest, accent underline that grows on hover,
+   accent text + pill once the section is active. */
+.nav-link {
+  position: relative;
+  color: var(--nav-link);
+  transition: color 0.25s ease;
 }
 
-.vertical-timeline-element-icon {
-  border-radius: 50% !important;
-  overflow: hidden;
-  background: linear-gradient(
-    135deg,
-    var(--accent),
-    var(--accent-secondary)
-  ) !important;
-  box-shadow:
-    0 0 0 4px var(--timeline-icon-ring),
-    0 0 20px rgba(var(--accent-rgb), 0.4) !important;
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0.3rem;
+  height: 2px;
+  width: 0;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
+  box-shadow: 0 0 10px rgba(var(--accent-rgb), 0.8);
+  transform: translateX(-50%);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.vertical-timeline-element-icon svg {
-  color: #ffffff;
+.nav-link:hover {
+  color: var(--nav-link-hover);
 }
 
-.vertical-timeline-element-content {
-  background: var(--timeline-content-bg) !important;
-  border: 1px solid var(--glass-border) !important;
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
-  box-shadow: var(--glass-shadow) !important;
+.nav-link:hover::after {
+  width: 55%;
 }
 
-.vertical-timeline-element-content .vertical-timeline-element-date {
-  opacity: 1 !important;
+.nav-link[data-active="true"] {
+  color: var(--nav-link-active);
+  font-weight: 600;
 }
 
-.vertical-timeline-element-content-arrow {
-  border-right-color: var(--timeline-content-bg) !important;
+.nav-link[data-active="true"]::after {
+  width: 0;
 }
 
 .divider-soft {
@@ -466,26 +933,87 @@ h3,
   box-shadow: 0 0 24px 6px rgba(var(--accent-rgb), 0.12);
 }
 
-/* ── Skill hover line ─────────────────────────────────────── */
-.skill-card::after {
-  content: "";
-  position: absolute;
-  left: 18%;
-  right: 18%;
-  bottom: 0;
-  height: 1px;
-  background: var(--accent);
-  box-shadow: 0 0 12px rgba(var(--accent-rgb), 0.7);
-  opacity: 0;
-  transform: scaleX(0.6);
+/* ── Skill cards ──────────────────────────────────────────── */
+.skill-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--skill-card-bg);
+  border: 2px solid var(--skill-card-border);
+  box-shadow: var(--skill-card-shadow);
   transition:
-    opacity 0.3s ease,
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
     transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.skill-card:hover::after {
-  opacity: 1;
-  transform: scaleX(1);
+.skill-card::before {
+  content: "";
+  position: absolute;
+  left: -8%;
+  right: -8%;
+  bottom: -10%;
+  height: 120%;
+  z-index: -1;
+  background: linear-gradient(
+    135deg,
+    var(--accent),
+    var(--accent-secondary)
+  );
+  border-radius: 48% 52% 0 0 / 7% 9% 0 0;
+  transform: translateY(100%) rotate(-1deg);
+  transform-origin: bottom center;
+  will-change: transform;
+  transition: transform 0.62s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.skill-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  pointer-events: none;
+}
+
+.skill-icon {
+  filter: drop-shadow(0 5px 12px rgba(15, 23, 42, 0.1));
+  transform: translateZ(28px);
+  transition:
+    color 0.3s ease,
+    filter 0.3s ease,
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.skill-label {
+  transform: translateZ(18px);
+  transition:
+    color 0.3s ease,
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.skill-card:hover {
+  border-color: rgba(var(--accent-secondary-rgb), 0.9);
+  box-shadow:
+    0 20px 42px rgba(var(--accent-rgb), 0.3),
+    0 0 28px rgba(var(--accent-rgb), 0.22);
+}
+
+.skill-card:hover::before {
+  transform: translateY(-2%) rotate(0deg);
+}
+
+.skill-card:hover .skill-icon {
+  color: #ffffff !important;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.22));
+  transform: translateZ(32px) translateY(-2px) scale(1.08);
+}
+
+.skill-card:hover .skill-label {
+  color: #ffffff;
+  transform: translateZ(22px) translateY(1px);
 }
 
 /* ── Hero avatar ──────────────────────────────────────────── */
@@ -968,6 +1496,30 @@ h3,
   .cursor-outline,
   .btn-shine::before {
     display: none !important;
+  }
+
+  .card-overlay,
+  .card-overlay > *,
+  .card-lift,
+  .overlay-cta,
+  .filter-tab,
+  .about-role-chip,
+  .store-chip,
+  .disclosure-btn,
+  .disclosure-btn svg,
+  .skill-card,
+  .skill-card::before,
+  .skill-card::after,
+  .skill-icon,
+  .skill-label,
+  .nav-link::after {
+    transition: none !important;
+  }
+
+  .card-lift:hover,
+  .overlay-cta:hover,
+  .store-chip:hover {
+    transform: none !important;
   }
 
   .scroll-progress-glow,

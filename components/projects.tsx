@@ -1,11 +1,9 @@
 "use client";
 
-import SectionHeading from "./section-heading";
+import SectionHeader from "@/components/ui/section-header";
 import { projectsData } from "@/lib/data";
 import Project from "./project";
 import { useSectionInView } from "@/lib/hooks";
-import { motion } from "framer-motion";
-import { duration, ease, viewportEnter } from "@/lib/motion";
 
 export default function Projects() {
   const { ref } = useSectionInView("Projects", 0.5);
@@ -14,31 +12,20 @@ export default function Projects() {
     <section
       ref={ref}
       id="projects"
-      className="mb-28 w-full max-w-6xl scroll-mt-28 sm:max-w-7xl"
+      className="mb-28 w-full max-w-6xl scroll-mt-28 sm:mb-40 sm:max-w-7xl"
     >
-      <motion.div
-        initial={{ opacity: 0, y: 24, filter: "blur(6px)" }}
-        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-        viewport={viewportEnter}
-        transition={{ duration: duration.slow, ease: ease.outExpo }}
-      >
-        <SectionHeading>My projects</SectionHeading>
-      </motion.div>
-
-      <motion.p
-        initial={{ opacity: 0, y: 28, filter: "blur(4px)" }}
-        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-        viewport={viewportEnter}
-        transition={{ duration: duration.slow, ease: ease.outExpo, delay: 0.08 }}
-        className="text-secondary -mt-4 mx-auto mb-10 max-w-3xl text-center"
+      <SectionHeader
+        eyebrow="Portfolio"
+        title="Projects Showcase"
+        tagline="What I've Built!"
       >
         Below, you&apos;ll find key projects that highlight my expertise and
         practical skills. Each project demonstrates my ability to handle complex
         challenges, use diverse technologies effectively, and manage projects
         proficiently.
-      </motion.p>
+      </SectionHeader>
 
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
         {projectsData.map((project, index) => (
           <Project key={project.title} {...project} index={index} />
         ))}

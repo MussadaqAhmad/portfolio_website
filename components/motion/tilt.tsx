@@ -33,7 +33,7 @@ export default function Tilt({
     <motion.div
       ref={ref}
       className={clsx("relative will-change-transform", className)}
-      style={{ transformStyle: "preserve-3d", perspective: 900 }}
+      style={{ transformStyle: "preserve-3d", transformPerspective: 900 }}
       onMouseMove={onMove}
       onMouseLeave={onLeave}
       animate={{

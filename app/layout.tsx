@@ -26,10 +26,6 @@ export const metadata = {
   title: "Mussadaq Ahmad | Software Engineer",
   description:
     "Mussadaq Ahmad is a Software Developer with 4+ years of experience specializing in mobile development using Flutter, React Native, and native Android and iOS technologies.",
-  icons: {
-    icon: [{ url: "/favicon.ico", type: "image/x-icon" }],
-    shortcut: "/favicon.ico",
-  },
 };
 
 export default function RootLayout({
@@ -40,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`!scroll-smooth ${jakarta.variable} ${syne.variable}`}>
       <body
-        className={`${jakarta.className} text-primary relative bg-gray-50 pt-28 dark:bg-[#0b0b0b] sm:pt-36`}
+        className={`${jakarta.className} text-primary relative bg-gray-50 pt-28 dark:bg-[#0b0b0b] md:pt-36`}
       >
         <ThemeContextProvider>
           <ActiveSectionContextProvider>

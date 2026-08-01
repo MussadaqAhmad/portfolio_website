@@ -1,6 +1,6 @@
 "use client";
 
-import SectionHeading from "./section-heading";
+import SectionHeader from "@/components/ui/section-header";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import { sendEmail } from "@/actions/sendEmail";
@@ -21,14 +21,19 @@ export default function Contact() {
       transition={{ duration: duration.cinematic, ease: ease.outExpo }}
       viewport={viewportEnter}
     >
-      <SectionHeading>Contact me</SectionHeading>
+      <SectionHeader
+        eyebrow="Contact"
+        title="Get In Touch"
+        tagline="Ask Me Anything!"
+        className="!mb-6 sm:!mb-8"
+      />
 
       <motion.p
         initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={viewportEnter}
         transition={{ ...spring.soft, delay: 0.1 }}
-        className="text-secondary -mt-6"
+        className="text-secondary"
       >
         Please contact me directly at{" "}
         <a

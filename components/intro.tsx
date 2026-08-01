@@ -42,7 +42,7 @@ const floatingIcons = [
   {
     label: "Kotlin",
     Icon: SiKotlin,
-    color: "#c084fc",
+    color: "#9333EA",
     position: "bottom-[14%] left-[-24%] xl:left-[-32%]",
     from: { x: -80, y: 80 },
   },
@@ -193,27 +193,30 @@ export default function Intro() {
           <motion.li
             key={stat.label}
             variants={staggerItem}
-            whileHover={{ y: -4, scale: 1.03 }}
-            transition={spring.snappy}
-            className="glass-surface flex min-w-[9rem] flex-col rounded-2xl px-5 py-3"
+            className="min-w-[9rem]"
           >
-            <span className="text-muted font-display text-[0.65rem] font-semibold uppercase tracking-[0.18em]">
-              {stat.label}
-            </span>
-            <span className="text-primary font-display mt-0.5 text-sm font-bold">
-              {stat.kind === "count" ? (
-                <AnimatedNumber
-                  value={stat.value}
-                  decimals={stat.decimals}
-                  suffix={stat.suffix}
-                  duration={1.8}
-                  delay={0.35}
-                  immediate
-                />
-              ) : (
-                stat.value
-              )}
-            </span>
+            <Tilt
+              maxTilt={6}
+              className="glass-surface flex flex-col rounded-2xl px-5 py-3"
+            >
+              <span className="text-muted font-display text-[0.65rem] font-semibold uppercase tracking-[0.18em]">
+                {stat.label}
+              </span>
+              <span className="text-primary font-display mt-0.5 text-sm font-bold">
+                {stat.kind === "count" ? (
+                  <AnimatedNumber
+                    value={stat.value}
+                    decimals={stat.decimals}
+                    suffix={stat.suffix}
+                    duration={1.8}
+                    delay={0.35}
+                    immediate
+                  />
+                ) : (
+                  stat.value
+                )}
+              </span>
+            </Tilt>
           </motion.li>
         ))}
       </motion.ul>

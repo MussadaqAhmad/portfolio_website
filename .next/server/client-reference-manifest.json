@@ -40,81 +40,17 @@
         "async": false
       }
     },
-    "(app-client)/./node_modules/react-hot-toast/dist/index.mjs": {
-      "*": {
-        "id": "(sc_client)/./node_modules/react-hot-toast/dist/index.mjs",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/header.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/header.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/footer.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/footer.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/theme-switch.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/theme-switch.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/motion/background-motion.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/motion/background-motion.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/motion/cursor-fx.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/motion/cursor-fx.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/motion/scroll-progress.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/motion/scroll-progress.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./context/active-section-context.tsx": {
-      "*": {
-        "id": "(sc_client)/./context/active-section-context.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./context/theme-context.tsx": {
-      "*": {
-        "id": "(sc_client)/./context/theme-context.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
     "(app-client)/./components/about.tsx": {
       "*": {
         "id": "(sc_client)/./components/about.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/certifications.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/certifications.tsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -131,6 +67,46 @@
     "(app-client)/./components/experience.tsx": {
       "*": {
         "id": "(sc_client)/./components/experience.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/intro.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/intro.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/packages-grid.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/packages-grid.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./public/corpcomment.png": {
+      "*": {
+        "id": "(sc_client)/./public/corpcomment.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./public/rmtdev.png": {
+      "*": {
+        "id": "(sc_client)/./public/rmtdev.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./public/wordanalytics.png": {
+      "*": {
+        "id": "(sc_client)/./public/wordanalytics.png",
         "name": "*",
         "chunks": [],
         "async": false
@@ -168,9 +144,73 @@
         "async": false
       }
     },
-    "(app-client)/./components/intro.tsx": {
+    "(app-client)/./node_modules/react-hot-toast/dist/index.mjs": {
       "*": {
-        "id": "(sc_client)/./components/intro.tsx",
+        "id": "(sc_client)/./node_modules/react-hot-toast/dist/index.mjs",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/header.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/header.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/footer.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/footer.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/theme-switch.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/theme-switch.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./context/active-section-context.tsx": {
+      "*": {
+        "id": "(sc_client)/./context/active-section-context.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./context/theme-context.tsx": {
+      "*": {
+        "id": "(sc_client)/./context/theme-context.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/motion/background-motion.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/motion/background-motion.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/motion/cursor-fx.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/motion/cursor-fx.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/motion/scroll-progress.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/motion/scroll-progress.tsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -259,6 +299,110 @@
       ],
       "async": false
     },
+    "D:\\Web Development\\Portfolio Website\\components\\about.tsx": {
+      "id": "(app-client)/./components/about.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\components\\certifications.tsx": {
+      "id": "(app-client)/./components/certifications.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\components\\contact.tsx": {
+      "id": "(app-client)/./components/contact.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\components\\experience.tsx": {
+      "id": "(app-client)/./components/experience.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\components\\intro.tsx": {
+      "id": "(app-client)/./components/intro.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\components\\packages-grid.tsx": {
+      "id": "(app-client)/./components/packages-grid.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\public\\corpcomment.png": {
+      "id": "(app-client)/./public/corpcomment.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\public\\rmtdev.png": {
+      "id": "(app-client)/./public/rmtdev.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\public\\wordanalytics.png": {
+      "id": "(app-client)/./public/wordanalytics.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\components\\projects.tsx": {
+      "id": "(app-client)/./components/projects.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\components\\section-bridge.tsx": {
+      "id": "(app-client)/./components/section-bridge.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\components\\section-divider.tsx": {
+      "id": "(app-client)/./components/section-divider.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\components\\skills.tsx": {
+      "id": "(app-client)/./components/skills.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
     "D:\\Web Development\\Portfolio Website\\node_modules\\react-hot-toast\\dist\\index.mjs": {
       "id": "(app-client)/./node_modules/react-hot-toast/dist/index.mjs",
       "name": "*",
@@ -307,6 +451,22 @@
       ],
       "async": false
     },
+    "D:\\Web Development\\Portfolio Website\\context\\active-section-context.tsx": {
+      "id": "(app-client)/./context/active-section-context.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\context\\theme-context.tsx": {
+      "id": "(app-client)/./context/theme-context.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
     "D:\\Web Development\\Portfolio Website\\components\\motion\\background-motion.tsx": {
       "id": "(app-client)/./components/motion/background-motion.tsx",
       "name": "*",
@@ -331,22 +491,6 @@
       ],
       "async": false
     },
-    "D:\\Web Development\\Portfolio Website\\context\\active-section-context.tsx": {
-      "id": "(app-client)/./context/active-section-context.tsx",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\context\\theme-context.tsx": {
-      "id": "(app-client)/./context/theme-context.tsx",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
     "D:\\Web Development\\Portfolio Website\\app\\globals.css": {
       "id": "(app-client)/./app/globals.css",
       "name": "*",
@@ -354,78 +498,12 @@
         "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\components\\about.tsx": {
-      "id": "(app-client)/./components/about.tsx",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\components\\contact.tsx": {
-      "id": "(app-client)/./components/contact.tsx",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\components\\experience.tsx": {
-      "id": "(app-client)/./components/experience.tsx",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\components\\projects.tsx": {
-      "id": "(app-client)/./components/projects.tsx",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\components\\section-bridge.tsx": {
-      "id": "(app-client)/./components/section-bridge.tsx",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\components\\section-divider.tsx": {
-      "id": "(app-client)/./components/section-divider.tsx",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\components\\skills.tsx": {
-      "id": "(app-client)/./components/skills.tsx",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\components\\intro.tsx": {
-      "id": "(app-client)/./components/intro.tsx",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
     }
   },
   "entryCSSFiles": {
+    "D:\\Web Development\\Portfolio Website\\app\\page": [],
     "D:\\Web Development\\Portfolio Website\\app\\layout": [
       "static/css/app/layout.css"
-    ],
-    "D:\\Web Development\\Portfolio Website\\app\\page": [
-      "static/css/app/page.css"
     ]
   }
 }

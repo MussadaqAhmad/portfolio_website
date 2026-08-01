@@ -1,12 +1,16 @@
 "use client";
 
-import { projectsData } from "@/lib/data";
+import { useState } from "react";
+import type { ProjectItem } from "@/lib/data";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { duration, ease, spring } from "@/lib/motion";
+import { spring } from "@/lib/motion";
 import { clsx } from "clsx";
+import { BsChevronDown } from "react-icons/bs";
+import { FaAppStoreIos, FaGooglePlay } from "react-icons/fa";
+import Tilt from "@/components/motion/tilt";
 
-type ProjectProps = (typeof projectsData)[number] & {
+type ProjectProps = ProjectItem & {
   index: number;
 };
 
@@ -22,7 +26,7 @@ const cardVariants = {
     filter: "blur(0px)",
     transition: {
       ...spring.soft,
-      delay: index * 0.06,
+      delay: (index % 3) * 0.08,
     },
   }),
 };
@@ -55,10 +59,36 @@ export default function Project({
   description,
   tags,
   imageUrl,
+  playStoreUrl,
+  appStoreUrl,
   index,
 }: ProjectProps) {
+  const [expanded, setExpanded] = useState(false);
+
   const visibleTags = tags.slice(0, 4);
   const remainingTags = tags.length - visibleTags.length;
+
+  const stores = [
+    playStoreUrl && {
+      key: "play",
+      label: "Play Store",
+      href: playStoreUrl,
+      Icon: FaGooglePlay,
+    },
+    appStoreUrl && {
+      key: "ios",
+      label: "App Store",
+      href: appStoreUrl,
+      Icon: FaAppStoreIos,
+    },
+  ].filter(Boolean) as {
+    key: string;
+    label: string;
+    href: string;
+    Icon: typeof FaGooglePlay;
+  }[];
+
+  const panelId = `project-desc-${index}`;
 
   return (
     <motion.div
@@ -69,41 +99,78 @@ export default function Project({
       viewport={{ once: true, amount: 0.2, margin: "-40px" }}
       className="h-full"
     >
-      <motion.article
-        whileHover={{ y: -4, transition: { duration: 0.35, ease: ease.out } }}
-        transition={spring.gentle}
-        className={clsx(
-          "group relative flex h-full cursor-default flex-col overflow-hidden rounded-xl",
-          "glass-surface glass-border-glow"
-        )}
-      >
-        <div className="relative aspect-[16/10] overflow-hidden">
-          <motion.div
-            className="absolute inset-0"
-            whileHover={{ scale: 1.04 }}
-            transition={{ duration: duration.slow, ease: ease.outExpo }}
-          >
-            <Image
-              src={imageUrl}
-              alt={`${title} project screenshot`}
-              fill
-              quality={90}
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-            />
-          </motion.div>
+      <Tilt maxTilt={5} className="h-full overflow-hidden rounded-3xl">
+        <article
+          className={clsx(
+            "group relative flex h-full flex-col rounded-3xl p-3",
+            "glass-surface glass-border-glow"
+          )}
+        >
+        <div className="card-media aspect-[16/10]">
+          <Image
+            src={imageUrl}
+            alt={`${title} app screenshot`}
+            fill
+            quality={90}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="scale-[1.02] object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.08]"
+          />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent opacity-40 transition-opacity duration-500 group-hover:opacity-60 dark:from-[#0b0b0b]/70" />
+          <div className="card-overlay">
+            {stores.length > 0 ? (
+              <div className="overlay-actions">
+                {stores.map(({ key, label, href, Icon }) => (
+                  <a
+                    key={key}
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="store-chip store-chip-overlay"
+                    aria-label={`View ${title} on the ${label}`}
+                  >
+                    <Icon aria-hidden className="text-[0.9rem]" />
+                    {label}
+                  </a>
+                ))}
+              </div>
+            ) : (
+              <p className="overlay-note line-clamp-5">{description}</p>
+            )}
+          </div>
         </div>
 
-        <div className="relative z-[3] flex flex-1 flex-col p-5">
-          <h3 className="text-primary font-display text-lg font-bold tracking-tight sm:text-xl">
+        <div className="relative z-[3] flex flex-1 flex-col px-2 pb-1 pt-5">
+          <h3 className="text-primary font-display flex items-start gap-2.5 text-lg font-bold tracking-tight sm:text-xl">
+            <span aria-hidden className="title-bar mt-1 h-5 self-stretch" />
             {title}
           </h3>
 
-          <p className="text-secondary mt-2 line-clamp-3 flex-1 text-sm leading-relaxed">
-            {description}
-          </p>
+          <div className="mt-2.5 flex items-start gap-3">
+            <p
+              id={panelId}
+              className={clsx(
+                "text-secondary flex-1 text-[0.875rem] leading-relaxed",
+                !expanded && "line-clamp-3"
+              )}
+            >
+              {description}
+            </p>
+
+            <button
+              type="button"
+              onClick={() => setExpanded((prev) => !prev)}
+              aria-expanded={expanded}
+              aria-controls={panelId}
+              aria-label={
+                expanded
+                  ? `Collapse the ${title} description`
+                  : `Read the full ${title} description`
+              }
+              className="disclosure-btn mt-0.5"
+            >
+              <BsChevronDown aria-hidden className="text-[0.7rem]" />
+            </button>
+          </div>
 
           <motion.ul
             className="mt-4 flex flex-wrap gap-2"
@@ -117,7 +184,7 @@ export default function Project({
                 custom={tagIndex}
                 variants={tagVariants}
                 whileHover="hover"
-                className="chip rounded-full px-2.5 py-1 text-[0.65rem] uppercase tracking-wider"
+                className="chip project-tech-chip rounded-full px-2.5 py-1 text-[0.65rem] uppercase tracking-wider"
                 key={tagIndex}
               >
                 {tag}
@@ -127,14 +194,35 @@ export default function Project({
               <motion.li
                 variants={tagVariants}
                 whileHover="hover"
-                className="chip rounded-full px-2.5 py-1 text-[0.65rem] uppercase tracking-wider opacity-80"
+                className="chip project-tech-chip rounded-full px-2.5 py-1 text-[0.65rem] uppercase tracking-wider opacity-80"
               >
                 +{remainingTags}
               </motion.li>
             )}
           </motion.ul>
+
+          {/* Devices without hover never reveal the image overlay, so the same
+              store links render inline for them instead. */}
+          {stores.length > 0 && (
+            <div className="store-links-touch mt-auto flex-wrap gap-2 pt-5">
+              {stores.map(({ key, label, href, Icon }) => (
+                <a
+                  key={key}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="store-chip"
+                  aria-label={`View ${title} on the ${label}`}
+                >
+                  <Icon aria-hidden className="text-[0.9rem]" />
+                  {label}
+                </a>
+              ))}
+            </div>
+          )}
         </div>
-      </motion.article>
+        </article>
+      </Tilt>
     </motion.div>
   );
 }

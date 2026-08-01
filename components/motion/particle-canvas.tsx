@@ -14,8 +14,8 @@ type Particle = {
 };
 
 const PALETTE = {
-  light: { accent: "99, 102, 241", dot: "129, 140, 248", linkAlpha: 0.14 },
-  dark: { accent: "168, 85, 247", dot: "216, 180, 254", linkAlpha: 0.18 },
+  light: { accent: "147, 51, 234", dot: "106, 47, 180", linkAlpha: 0.14 },
+  dark: { accent: "147, 51, 234", dot: "106, 47, 180", linkAlpha: 0.2 },
 };
 
 const LINK_DISTANCE = 130;

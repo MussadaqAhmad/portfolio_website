@@ -4,7 +4,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
-import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Header() {
@@ -12,54 +11,59 @@ export default function Header() {
     useActiveSectionContext();
 
   return (
-    <header className="z-[999] relative">
-      <motion.div
-        className="nav-shell fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full"
-        initial={{ y: -100, x: "-50%", opacity: 0, filter: "blur(8px)" }}
-        animate={{ y: 0, x: "-50%", opacity: 1, filter: "blur(0px)" }}
-        transition={{ type: "spring", stiffness: 120, damping: 20 }}
-      ></motion.div>
+    <header className="relative z-[999]">
+      {/* The shell is absolutely positioned inside this wrapper so it always
+          matches the height of the links, however many rows they wrap onto. */}
+      <div className="fixed left-1/2 top-0 w-full -translate-x-1/2 md:top-6 md:w-auto">
+        <motion.div
+          className="nav-shell absolute inset-0 rounded-none border md:rounded-full"
+          initial={{ y: -100, opacity: 0, filter: "blur(8px)" }}
+          animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+          transition={{ type: "spring", stiffness: 120, damping: 20 }}
+        />
 
-      <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-        <ul className="text-muted flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium sm:w-[initial] sm:flex-nowrap sm:gap-5">
-          {links.map((link) => (
-            <motion.li
-              className="h-3/4 flex items-center justify-center relative"
-              key={link.hash}
-              initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-            >
-              <Link
-                className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 transition hover:text-gray-950 dark:hover:text-white/90",
-                  {
-                    "text-primary": activeSection === link.name,
-                  }
-                )}
-                href={link.hash}
-                onClick={() => {
-                  setActiveSection(link.name);
-                  setTimeOfLastClick(Date.now());
-                }}
-              >
-                {link.name}
+        <nav aria-label="Primary" className="relative px-2 py-2.5 md:px-4 md:py-1.5">
+          <ul className="mx-auto flex max-w-[24rem] flex-wrap items-center justify-center gap-x-1 gap-y-0.5 text-[0.8rem] font-medium md:max-w-none md:flex-nowrap md:gap-x-1.5 md:text-[0.85rem]">
+            {links.map((link) => {
+              const isActive = activeSection === link.name;
 
-                {link.name === activeSection && (
-                  <motion.span
-                    className="nav-active rounded-full absolute inset-0 -z-10"
-                    layoutId="activeSection"
-                    transition={{
-                      type: "spring",
-                      stiffness: 380,
-                      damping: 30,
+              return (
+                <motion.li
+                  className="relative flex items-center justify-center"
+                  key={link.hash}
+                  initial={{ y: -100, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                >
+                  <Link
+                    className="nav-link flex w-full items-center justify-center rounded-full px-2.5 py-2 md:px-3 md:py-2.5"
+                    data-active={isActive}
+                    aria-current={isActive ? "page" : undefined}
+                    href={link.hash}
+                    onClick={() => {
+                      setActiveSection(link.name);
+                      setTimeOfLastClick(Date.now());
                     }}
-                  ></motion.span>
-                )}
-              </Link>
-            </motion.li>
-          ))}
-        </ul>
-      </nav>
+                  >
+                    {link.name}
+
+                    {isActive && (
+                      <motion.span
+                        className="nav-active absolute inset-0 -z-10 rounded-full"
+                        layoutId="activeSection"
+                        transition={{
+                          type: "spring",
+                          stiffness: 380,
+                          damping: 30,
+                        }}
+                      />
+                    )}
+                  </Link>
+                </motion.li>
+              );
+            })}
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 }

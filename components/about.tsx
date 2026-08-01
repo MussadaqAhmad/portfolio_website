@@ -1,6 +1,6 @@
 "use client";
 
-import SectionHeading from "./section-heading";
+import SectionHeader from "@/components/ui/section-header";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import {
@@ -12,6 +12,16 @@ import {
   viewportEnter,
 } from "@/lib/motion";
 import AnimatedNumber from "@/components/motion/animated-number";
+import Tilt from "@/components/motion/tilt";
+import { MdOutlineEngineering, MdOutlineLayers, MdOutlineSmartToy } from "react-icons/md";
+import { SiNodedotjs } from "react-icons/si";
+
+const roles = [
+  { label: "Senior Software Engineer", Icon: MdOutlineEngineering },
+  { label: "AI-Powered Products", Icon: MdOutlineSmartToy },
+  { label: "Node.js Developer", Icon: SiNodedotjs },
+  { label: "Full Stack Mobile Developer", Icon: MdOutlineLayers },
+] as const;
 
 export default function About() {
   const { ref } = useSectionInView("About");
@@ -20,24 +30,32 @@ export default function About() {
     <motion.section
       ref={ref}
       id="about"
-      className="text-secondary mb-28 max-w-[45rem] scroll-mt-28 text-center leading-8 sm:mb-40"
+      className="mb-28 w-full max-w-5xl scroll-mt-28 sm:mb-40"
       initial={{ opacity: 0, y: 48, filter: "blur(8px)" }}
       whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
       viewport={viewportEnter}
       transition={{ duration: duration.slow, ease: ease.outExpo }}
     >
-      <SectionHeading>About me</SectionHeading>
+      <SectionHeader
+        eyebrow="Introduction"
+        title="About Me"
+        tagline="Behind The Code!"
+      />
 
-      <motion.div
-        variants={staggerContainer(0.12, 0.1)}
-        initial="hidden"
-        whileInView="visible"
-        viewport={viewportEnter}
-        className="glass-surface conic-border space-y-4 rounded-3xl px-6 py-8 sm:px-10 sm:py-12"
-      >
-        <motion.p variants={staggerItem} className="mb-3">
+      <Tilt maxTilt={4} className="rounded-3xl">
+        <motion.div
+          variants={staggerContainer(0.12, 0.1)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportEnter}
+          className="glass-surface conic-border card-lift rounded-3xl px-6 py-8 text-left sm:px-10 sm:py-12"
+        >
+        <motion.p
+          variants={staggerItem}
+          className="text-secondary text-[0.95rem] leading-8 sm:text-base"
+        >
           Senior Mobile Engineer with{" "}
-          <span className="text-primary font-medium">
+          <span className="text-accent font-semibold">
             <AnimatedNumber
               value={4.5}
               decimals={1}
@@ -66,37 +84,30 @@ export default function About() {
           native codebases.
         </motion.p>
 
-        <motion.p
+        <motion.div
           variants={staggerItem}
-          className="mb-3 flex flex-wrap items-center justify-center gap-2"
+          className="divider-soft my-8"
+          aria-hidden
+        />
+
+        <motion.ul
+          variants={staggerItem}
+          className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4"
         >
-          {[
-            "Senior Software Engineer",
-            "Cross Platform App Developer",
-            "Node.js Developer",
-            "Full Stack Mobile Developer",
-          ].map((role) => (
-            <motion.span
-              key={role}
+          {roles.map(({ label, Icon }) => (
+            <motion.li
+              key={label}
               whileHover={{ y: -3, scale: 1.04 }}
               transition={spring.snappy}
-              className="chip rounded-full px-3 py-1 text-sm font-medium"
+              className="about-role-chip flex min-h-12 items-center justify-center gap-2.5 rounded-full px-4 py-2.5 text-center text-[0.78rem] font-semibold"
             >
-              {role}
-            </motion.span>
+              <Icon aria-hidden className="shrink-0 text-lg" />
+              <span>{label}</span>
+            </motion.li>
           ))}
-        </motion.p>
-
-        <motion.p variants={staggerItem} className="text-muted">
-          <span className="text-secondary italic">My achievements include:</span> completing
-          Mobile App Development certification from Techlift (GC-IT) Bootcamp
-          (Aug 2021), participating in DAIRA&apos;18 Speed Programming at FAST-NU,
-          AIRTECH&apos;17 Mobile App Designing at Air University Islamabad, Riphah
-          speed programming at Junnon&apos;18, organizing FUTSAL at Riphah Annual
-          Junnon&apos;18, and serving as E-Gaming Head at Riphah Annual
-          Olympiad&apos;17.
-        </motion.p>
-      </motion.div>
+        </motion.ul>
+        </motion.div>
+      </Tilt>
     </motion.section>
   );
 }
