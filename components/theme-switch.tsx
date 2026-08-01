@@ -18,7 +18,7 @@ export default function ThemeSwitch() {
   return (
     <motion.button
       ref={ref}
-      className="fixed bottom-5 right-5 z-[999] flex h-[3rem] w-[3rem] items-center justify-center rounded-full border border-white border-opacity-40 bg-white bg-opacity-80 text-gray-800 shadow-2xl backdrop-blur-[0.5rem] dark:border-white/[0.06] dark:bg-[#151515] dark:text-[#F5F5F5] dark:shadow-[0_8px_24px_rgba(0,0,0,0.4)]"
+      className="icon-button fixed bottom-5 right-5 z-[999] flex h-[3rem] w-[3rem] items-center justify-center rounded-full"
       onClick={toggleTheme}
       onMouseMove={onMove}
       onMouseLeave={onLeave}

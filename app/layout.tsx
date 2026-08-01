@@ -7,7 +7,7 @@ import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import BackgroundMotion from "@/components/motion/background-motion";
-import DarkCursor from "@/components/motion/dark-cursor";
+import CursorFx from "@/components/motion/cursor-fx";
 import ScrollProgress from "@/components/motion/scroll-progress";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -40,13 +40,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`!scroll-smooth ${jakarta.variable} ${syne.variable}`}>
       <body
-        className={`${jakarta.className} relative bg-gray-50 pt-28 text-gray-950 dark:bg-[#090909] dark:text-[#F5F5F5] sm:pt-36`}
+        className={`${jakarta.className} text-primary relative bg-gray-50 pt-28 dark:bg-[#0b0b0b] sm:pt-36`}
       >
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <ScrollProgress />
             <BackgroundMotion />
-            <DarkCursor />
+            <CursorFx />
             <div className="noise-overlay" aria-hidden />
             <Header />
             {children}

@@ -40,6 +40,78 @@
         "async": false
       }
     },
+    "(app-client)/./node_modules/react-hot-toast/dist/index.mjs": {
+      "*": {
+        "id": "(sc_client)/./node_modules/react-hot-toast/dist/index.mjs",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/header.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/header.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/footer.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/footer.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/theme-switch.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/theme-switch.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/motion/background-motion.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/motion/background-motion.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/motion/cursor-fx.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/motion/cursor-fx.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/motion/scroll-progress.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/motion/scroll-progress.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./context/active-section-context.tsx": {
+      "*": {
+        "id": "(sc_client)/./context/active-section-context.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./context/theme-context.tsx": {
+      "*": {
+        "id": "(sc_client)/./context/theme-context.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
     "(app-client)/./components/about.tsx": {
       "*": {
         "id": "(sc_client)/./components/about.tsx",
@@ -99,78 +171,6 @@
     "(app-client)/./components/intro.tsx": {
       "*": {
         "id": "(sc_client)/./components/intro.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./node_modules/react-hot-toast/dist/index.mjs": {
-      "*": {
-        "id": "(sc_client)/./node_modules/react-hot-toast/dist/index.mjs",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/header.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/header.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/footer.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/footer.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/theme-switch.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/theme-switch.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/motion/background-motion.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/motion/background-motion.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/motion/dark-cursor.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/motion/dark-cursor.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/motion/scroll-progress.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/motion/scroll-progress.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./context/active-section-context.tsx": {
-      "*": {
-        "id": "(sc_client)/./context/active-section-context.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./context/theme-context.tsx": {
-      "*": {
-        "id": "(sc_client)/./context/theme-context.tsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -259,6 +259,102 @@
       ],
       "async": false
     },
+    "D:\\Web Development\\Portfolio Website\\node_modules\\react-hot-toast\\dist\\index.mjs": {
+      "id": "(app-client)/./node_modules/react-hot-toast/dist/index.mjs",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\node_modules\\next\\font\\google\\target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Plus_Jakarta_Sans\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-body\",\"display\":\"swap\"}],\"variableName\":\"jakarta\"}": {
+      "id": "(app-client)/./node_modules/next/font/google/target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Plus_Jakarta_Sans\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-body\",\"display\":\"swap\"}],\"variableName\":\"jakarta\"}",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\node_modules\\next\\font\\google\\target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Syne\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-display\",\"display\":\"swap\"}],\"variableName\":\"syne\"}": {
+      "id": "(app-client)/./node_modules/next/font/google/target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Syne\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-display\",\"display\":\"swap\"}],\"variableName\":\"syne\"}",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\components\\header.tsx": {
+      "id": "(app-client)/./components/header.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\components\\footer.tsx": {
+      "id": "(app-client)/./components/footer.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\components\\theme-switch.tsx": {
+      "id": "(app-client)/./components/theme-switch.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\components\\motion\\background-motion.tsx": {
+      "id": "(app-client)/./components/motion/background-motion.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\components\\motion\\cursor-fx.tsx": {
+      "id": "(app-client)/./components/motion/cursor-fx.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\components\\motion\\scroll-progress.tsx": {
+      "id": "(app-client)/./components/motion/scroll-progress.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\context\\active-section-context.tsx": {
+      "id": "(app-client)/./context/active-section-context.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\context\\theme-context.tsx": {
+      "id": "(app-client)/./context/theme-context.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\app\\globals.css": {
+      "id": "(app-client)/./app/globals.css",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
     "D:\\Web Development\\Portfolio Website\\components\\about.tsx": {
       "id": "(app-client)/./components/about.tsx",
       "name": "*",
@@ -322,110 +418,14 @@
         "app/page:static/chunks/app/page.js"
       ],
       "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\node_modules\\react-hot-toast\\dist\\index.mjs": {
-      "id": "(app-client)/./node_modules/react-hot-toast/dist/index.mjs",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\node_modules\\next\\font\\google\\target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Plus_Jakarta_Sans\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-body\",\"display\":\"swap\"}],\"variableName\":\"jakarta\"}": {
-      "id": "(app-client)/./node_modules/next/font/google/target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Plus_Jakarta_Sans\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-body\",\"display\":\"swap\"}],\"variableName\":\"jakarta\"}",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\node_modules\\next\\font\\google\\target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Syne\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-display\",\"display\":\"swap\"}],\"variableName\":\"syne\"}": {
-      "id": "(app-client)/./node_modules/next/font/google/target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Syne\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-display\",\"display\":\"swap\"}],\"variableName\":\"syne\"}",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\components\\header.tsx": {
-      "id": "(app-client)/./components/header.tsx",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\components\\footer.tsx": {
-      "id": "(app-client)/./components/footer.tsx",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\components\\theme-switch.tsx": {
-      "id": "(app-client)/./components/theme-switch.tsx",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\components\\motion\\background-motion.tsx": {
-      "id": "(app-client)/./components/motion/background-motion.tsx",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\components\\motion\\dark-cursor.tsx": {
-      "id": "(app-client)/./components/motion/dark-cursor.tsx",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\components\\motion\\scroll-progress.tsx": {
-      "id": "(app-client)/./components/motion/scroll-progress.tsx",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\context\\active-section-context.tsx": {
-      "id": "(app-client)/./context/active-section-context.tsx",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\context\\theme-context.tsx": {
-      "id": "(app-client)/./context/theme-context.tsx",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\app\\globals.css": {
-      "id": "(app-client)/./app/globals.css",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
     }
   },
   "entryCSSFiles": {
-    "D:\\Web Development\\Portfolio Website\\app\\page": [
-      "static/css/app/page.css"
-    ],
     "D:\\Web Development\\Portfolio Website\\app\\layout": [
       "static/css/app/layout.css"
+    ],
+    "D:\\Web Development\\Portfolio Website\\app\\page": [
+      "static/css/app/page.css"
     ]
   }
 }

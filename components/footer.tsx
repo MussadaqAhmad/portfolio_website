@@ -10,7 +10,7 @@ export default function Footer() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={viewportEnter}
       transition={{ duration: duration.slow, ease: ease.outExpo }}
-      className="mb-10 px-4 text-center text-gray-500 dark:text-[#52525B]"
+      className="text-faint mb-10 px-4 text-center"
     >
       <small className="block text-xs">
         &copy; {new Date().getFullYear()} Mussadaq Ahmad. All rights reserved.

@@ -14,7 +14,7 @@ export default function Projects() {
     <section
       ref={ref}
       id="projects"
-      className="dark-band dark-band-focus mb-28 w-full max-w-6xl scroll-mt-28 sm:max-w-7xl"
+      className="mb-28 w-full max-w-6xl scroll-mt-28 sm:max-w-7xl"
     >
       <motion.div
         initial={{ opacity: 0, y: 24, filter: "blur(6px)" }}
@@ -30,7 +30,7 @@ export default function Projects() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         viewport={viewportEnter}
         transition={{ duration: duration.slow, ease: ease.outExpo, delay: 0.08 }}
-        className="-mt-4 mx-auto mb-10 max-w-3xl text-center text-gray-700 dark:text-[#A1A1AA]"
+        className="text-secondary -mt-4 mx-auto mb-10 max-w-3xl text-center"
       >
         Below, you&apos;ll find key projects that highlight my expertise and
         practical skills. Each project demonstrates my ability to handle complex

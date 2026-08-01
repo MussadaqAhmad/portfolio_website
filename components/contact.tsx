@@ -15,7 +15,7 @@ export default function Contact() {
     <motion.section
       id="contact"
       ref={ref}
-      className="dark-contact-mesh dark-band dark-band-alt mb-20 w-[min(100%,38rem)] text-center sm:mb-28"
+      className="mb-20 w-[min(100%,38rem)] text-center sm:mb-28"
       initial={{ opacity: 0, y: 40, filter: "blur(8px)" }}
       whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
       transition={{ duration: duration.cinematic, ease: ease.outExpo }}
@@ -28,11 +28,11 @@ export default function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={viewportEnter}
         transition={{ ...spring.soft, delay: 0.1 }}
-        className="-mt-6 text-gray-700 dark:text-[#A1A1AA]"
+        className="text-secondary -mt-6"
       >
         Please contact me directly at{" "}
         <a
-          className="underline decoration-zinc-400/60 underline-offset-2 transition hover:text-gray-950 dark:text-[#F5F5F5] dark:decoration-white/25 dark:hover:text-white"
+          className="text-primary underline decoration-[rgba(var(--accent-rgb),0.6)] underline-offset-2 transition hover:decoration-[var(--accent)]"
           href="mailto:mussadaq900@gmail.com"
         >
           mussadaq900@gmail.com
@@ -58,7 +58,7 @@ export default function Contact() {
         }}
       >
         <input
-          className="h-14 rounded-lg borderBlack bg-white/70 px-4 text-gray-900 placeholder:text-gray-500 backdrop-blur-sm transition-all focus:scale-[1.01] focus:shadow-md dark:border-white/[0.06] dark:bg-[#1B1B1B] dark:text-[#F5F5F5] dark:placeholder:text-[#71717A] dark:outline-none dark:focus:border-white/15 dark:focus:bg-[#1B1B1B] dark:focus:shadow-none dark:focus:scale-100"
+          className="field h-14 rounded-lg px-4"
           name="senderEmail"
           type="email"
           required
@@ -66,7 +66,7 @@ export default function Contact() {
           placeholder="Your email"
         />
         <textarea
-          className="my-3 h-52 rounded-lg borderBlack bg-white/70 p-4 text-gray-900 placeholder:text-gray-500 backdrop-blur-sm transition-all focus:scale-[1.01] focus:shadow-md dark:border-white/[0.06] dark:bg-[#1B1B1B] dark:text-[#F5F5F5] dark:placeholder:text-[#71717A] dark:outline-none dark:focus:border-white/15 dark:focus:bg-[#1B1B1B] dark:focus:shadow-none dark:focus:scale-100"
+          className="field my-3 h-52 rounded-lg p-4"
           name="message"
           placeholder="Your message"
           required

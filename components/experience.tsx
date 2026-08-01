@@ -8,7 +8,6 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
-import { useTheme } from "@/context/theme-context";
 import { motion } from "framer-motion";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { duration, ease, spring, viewportEnter } from "@/lib/motion";
@@ -16,14 +15,12 @@ import { AnimateNumbersInText } from "@/components/motion/animated-number";
 
 export default function Experience() {
   const { ref } = useSectionInView("Experience");
-  const { theme } = useTheme();
-  const isLight = theme === "light";
 
   return (
     <section
       id="experience"
       ref={ref}
-      className="dark-band mb-28 w-full max-w-4xl scroll-mt-28 sm:mb-40"
+      className="mb-28 w-full max-w-4xl scroll-mt-28 sm:mb-40"
     >
       <SectionHeading>My work experience</SectionHeading>
       <motion.p
@@ -31,51 +28,26 @@ export default function Experience() {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         viewport={viewportEnter}
         transition={{ duration: duration.slow, ease: ease.outExpo }}
-        className="-mt-4 mx-auto mb-12 max-w-2xl text-center text-gray-700 dark:text-[#A1A1AA]"
+        className="text-secondary -mt-4 mx-auto mb-12 max-w-2xl text-center"
       >
         A track record of building and shipping mobile products — from early-career
         contributions to leading cross-platform development for global teams.
       </motion.p>
 
-      <VerticalTimeline
-        lineColor={isLight ? "#e5e7eb" : "rgba(255,255,255,0.1)"}
-      >
+      <VerticalTimeline>
         {experiencesData.map((item, index) => (
           <VerticalTimelineElement
             key={index}
             contentStyle={{
-              background: isLight
-                ? "rgba(249, 250, 251, 0.72)"
-                : "#151515",
-              boxShadow: isLight
-                ? "0 8px 32px rgba(0,0,0,0.04)"
-                : "0 8px 24px rgba(0,0,0,0.3)",
-              border: isLight
-                ? "1px solid rgba(0, 0, 0, 0.06)"
-                : "1px solid rgba(255, 255, 255, 0.06)",
               textAlign: "left",
               padding: "1.5rem 1.75rem",
               borderRadius: "1rem",
-              backdropFilter: isLight ? "blur(16px)" : "none",
-              WebkitBackdropFilter: isLight ? "blur(16px)" : "none",
             }}
-            contentArrowStyle={{
-              borderRight: isLight
-                ? "0.4rem solid #f3f4f6"
-                : "0.4rem solid #151515",
-            }}
+            contentArrowStyle={{ borderRightWidth: "0.4rem" }}
             date={item.date}
             dateClassName="!font-medium !text-gray-500 dark:!text-[#71717A]"
             icon={item.icon}
-            iconStyle={{
-              background: isLight ? "white" : "#F5F5F5",
-              color: isLight ? undefined : "#090909",
-              fontSize: "1.35rem",
-              borderRadius: "50%",
-              boxShadow: isLight
-                ? "0 0 0 4px #f3f4f6, 0 4px 16px rgba(0,0,0,0.06)"
-                : "0 0 0 4px #111111, 0 4px 16px rgba(0,0,0,0.35)",
-            }}
+            iconStyle={{ fontSize: "1.35rem" }}
           >
             <motion.div
               initial={{ opacity: 0, y: 12 }}
@@ -85,24 +57,24 @@ export default function Experience() {
             >
               <div className="flex flex-wrap items-start justify-between gap-2">
                 <div>
-                  <h3 className="font-display text-lg font-bold tracking-tight text-gray-950 dark:text-[#F5F5F5]">
+                  <h3 className="text-primary font-display text-lg font-bold tracking-tight">
                     {item.title}
                   </h3>
-                  <p className="mt-0.5 font-medium text-gray-800 dark:text-[#E5E5E5]">
+                  <p className="text-primary mt-0.5 font-medium">
                     {item.company}
                   </p>
                 </div>
-                <span className="rounded-full bg-gray-200/80 px-3 py-1 text-xs font-medium text-gray-600 dark:border dark:border-white/[0.06] dark:bg-[#1B1B1B] dark:text-[#A1A1AA]">
+                <span className="chip rounded-full px-3 py-1 text-xs font-medium">
                   {item.employmentType}
                 </span>
               </div>
 
-              <p className="!mt-2 flex items-center gap-1.5 text-sm text-gray-500 dark:text-[#71717A]">
+              <p className="text-muted !mt-2 flex items-center gap-1.5 text-sm">
                 <HiOutlineLocationMarker className="shrink-0 text-base" />
                 {item.location}
               </p>
 
-              <ul className="!mt-4 space-y-2.5 pl-4 text-[0.925rem] leading-relaxed text-gray-700 dark:text-[#A1A1AA]">
+              <ul className="text-secondary !mt-4 space-y-2.5 pl-4 text-[0.925rem] leading-relaxed">
                 {item.highlights.map((highlight, highlightIndex) => (
                   <motion.li
                     key={highlightIndex}
@@ -132,7 +104,7 @@ export default function Experience() {
                       ...spring.snappy,
                       delay: 0.03 * skillIndex,
                     }}
-                    className="rounded-full bg-gray-900/[0.07] px-2.5 py-1 text-[0.65rem] font-medium uppercase tracking-wide text-gray-700 dark:border dark:border-white/[0.06] dark:bg-[#1B1B1B] dark:text-[#A1A1AA]"
+                    className="chip rounded-full px-2.5 py-1 text-[0.65rem] font-medium uppercase tracking-wide"
                   >
                     {skill}
                   </motion.span>

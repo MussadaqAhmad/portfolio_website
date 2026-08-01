@@ -7,12 +7,9 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import { useTheme } from "@/context/theme-context";
 
 export default function ScrollProgress() {
   const preferReduced = useReducedMotion();
-  const { theme } = useTheme();
-  const isDark = theme === "dark";
   const { scrollYProgress } = useScroll();
 
   const scaleX = useSpring(scrollYProgress, {
@@ -36,28 +33,20 @@ export default function ScrollProgress() {
       aria-valuemax={100}
       aria-label="Reading progress"
     >
-      <div
-        className={`relative w-full overflow-visible scroll-progress-track ${
-          isDark ? "h-[2px]" : "h-[3px]"
-        }`}
-      >
+      <div className="scroll-progress-track relative h-[3px] w-full overflow-visible">
         <motion.div
           className="relative h-full origin-left"
           style={{ scaleX }}
         >
           <div className="scroll-progress-bar absolute inset-0" />
-          {!isDark && (
-            <>
-              <motion.div
-                className="scroll-progress-glow"
-                style={{ opacity: glowOpacity }}
-              />
-              <motion.div
-                className="scroll-progress-tip absolute right-0 top-1/2"
-                style={{ opacity: glowOpacity }}
-              />
-            </>
-          )}
+          <motion.div
+            className="scroll-progress-glow"
+            style={{ opacity: glowOpacity }}
+          />
+          <motion.div
+            className="scroll-progress-tip absolute right-0 top-1/2"
+            style={{ opacity: glowOpacity }}
+          />
         </motion.div>
       </div>
     </div>

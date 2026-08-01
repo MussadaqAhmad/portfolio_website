@@ -32,14 +32,14 @@ export default function SectionDivider() {
         className="group flex flex-col items-center gap-3 outline-none"
         aria-label="Scroll to explore About section"
       >
-        <span className="font-display text-[0.7rem] font-semibold uppercase tracking-widest text-gray-500 transition-colors group-hover:text-gray-800 dark:text-[#71717A] dark:group-hover:text-[#F5F5F5]">
+        <span className="text-muted font-display text-[0.7rem] font-semibold uppercase tracking-widest transition-colors group-hover:text-gray-800 dark:group-hover:text-white">
           Scroll to explore
         </span>
 
-        <span className="relative flex h-14 w-7 items-start justify-center rounded-full border border-gray-300/80 bg-white/50 pt-2 backdrop-blur-sm transition group-hover:border-gray-400 dark:border-white/[0.08] dark:bg-[#151515] dark:group-hover:border-white/20">
+        <span className="icon-button relative flex h-14 w-7 items-start justify-center rounded-full pt-2 transition">
           <motion.span
             aria-hidden
-            className="h-1.5 w-1.5 rounded-full bg-gray-700 dark:bg-[#E5E5E5]"
+            className="h-1.5 w-1.5 rounded-full bg-[var(--accent)]"
             animate={
               preferReduced
                 ? undefined
@@ -56,7 +56,7 @@ export default function SectionDivider() {
 
         <motion.span
           aria-hidden
-          className="flex flex-col items-center gap-0.5 text-gray-400 dark:text-[#52525B]"
+          className="text-faint flex flex-col items-center gap-0.5"
           animate={preferReduced ? undefined : { y: [0, 4, 0] }}
           transition={{
             duration: 1.6,
@@ -85,13 +85,13 @@ export default function SectionDivider() {
       {!preferReduced && (
         <motion.div
           aria-hidden
-          className="mt-4 h-12 w-px overflow-hidden bg-gradient-to-b from-gray-300 via-gray-300/40 to-transparent dark:from-white/15 dark:via-white/[0.08]"
+          className="mt-4 h-12 w-px overflow-hidden bg-gradient-to-b from-[rgba(var(--accent-rgb),0.35)] via-[rgba(var(--accent-rgb),0.15)] to-transparent"
           initial={{ scaleY: 0, originY: 0 }}
           animate={{ scaleY: 1 }}
           transition={{ duration: duration.slow, ease: ease.outExpo, delay: 0.7 }}
         >
           <motion.div
-            className="h-full w-full bg-gradient-to-b from-transparent via-gray-500 to-transparent dark:via-white/40"
+            className="h-full w-full bg-gradient-to-b from-transparent via-[var(--accent)] to-transparent"
             animate={{ y: ["-100%", "100%"] }}
             transition={{
               duration: 2.2,
