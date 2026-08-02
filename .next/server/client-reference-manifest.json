@@ -40,206 +40,6 @@
         "async": false
       }
     },
-    "(app-client)/./components/about.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/about.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/certifications.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/certifications.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/contact.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/contact.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/experience.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/experience.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/intro.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/intro.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/packages-grid.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/packages-grid.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./public/projects/tp-auction.png": {
-      "*": {
-        "id": "(sc_client)/./public/projects/tp-auction.png",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./public/projects/inner-light.png": {
-      "*": {
-        "id": "(sc_client)/./public/projects/inner-light.png",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./public/projects/twadini.png": {
-      "*": {
-        "id": "(sc_client)/./public/projects/twadini.png",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./public/projects/captain-twadini.png": {
-      "*": {
-        "id": "(sc_client)/./public/projects/captain-twadini.png",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./public/projects/hr-connect.png": {
-      "*": {
-        "id": "(sc_client)/./public/projects/hr-connect.png",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./public/projects/scotani.png": {
-      "*": {
-        "id": "(sc_client)/./public/projects/scotani.png",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./public/projects/vendi.png": {
-      "*": {
-        "id": "(sc_client)/./public/projects/vendi.png",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./public/projects/venus.png": {
-      "*": {
-        "id": "(sc_client)/./public/projects/venus.png",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./public/projects/beautyfixy.png": {
-      "*": {
-        "id": "(sc_client)/./public/projects/beautyfixy.png",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./public/projects/qpid-asia.png": {
-      "*": {
-        "id": "(sc_client)/./public/projects/qpid-asia.png",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./public/projects/ikwteat.png": {
-      "*": {
-        "id": "(sc_client)/./public/projects/ikwteat.png",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./public/projects/precision-wellness.png": {
-      "*": {
-        "id": "(sc_client)/./public/projects/precision-wellness.png",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./public/projects/stocker.png": {
-      "*": {
-        "id": "(sc_client)/./public/projects/stocker.png",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./public/projects/uv-schools.png": {
-      "*": {
-        "id": "(sc_client)/./public/projects/uv-schools.png",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/projects.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/projects.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/section-bridge.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/section-bridge.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/section-divider.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/section-divider.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/skills.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/skills.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./node_modules/react-hot-toast/dist/index.mjs": {
-      "*": {
-        "id": "(sc_client)/./node_modules/react-hot-toast/dist/index.mjs",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
     "(app-client)/./components/header.tsx": {
       "*": {
         "id": "(sc_client)/./components/header.tsx",
@@ -264,22 +64,6 @@
         "async": false
       }
     },
-    "(app-client)/./context/active-section-context.tsx": {
-      "*": {
-        "id": "(sc_client)/./context/active-section-context.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./context/theme-context.tsx": {
-      "*": {
-        "id": "(sc_client)/./context/theme-context.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
     "(app-client)/./components/motion/background-motion.tsx": {
       "*": {
         "id": "(sc_client)/./components/motion/background-motion.tsx",
@@ -299,6 +83,38 @@
     "(app-client)/./components/motion/scroll-progress.tsx": {
       "*": {
         "id": "(sc_client)/./components/motion/scroll-progress.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./context/active-section-context.tsx": {
+      "*": {
+        "id": "(sc_client)/./context/active-section-context.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./context/theme-context.tsx": {
+      "*": {
+        "id": "(sc_client)/./context/theme-context.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/react-hot-toast/dist/index.mjs": {
+      "*": {
+        "id": "(sc_client)/./node_modules/react-hot-toast/dist/index.mjs",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/shared/lib/lazy-dynamic/dynamic-no-ssr.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/shared/lib/lazy-dynamic/dynamic-no-ssr.js",
         "name": "*",
         "chunks": [],
         "async": false
@@ -387,222 +203,6 @@
       ],
       "async": false
     },
-    "D:\\Web Development\\Portfolio Website\\components\\about.tsx": {
-      "id": "(app-client)/./components/about.tsx",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\components\\certifications.tsx": {
-      "id": "(app-client)/./components/certifications.tsx",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\components\\contact.tsx": {
-      "id": "(app-client)/./components/contact.tsx",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\components\\experience.tsx": {
-      "id": "(app-client)/./components/experience.tsx",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\components\\intro.tsx": {
-      "id": "(app-client)/./components/intro.tsx",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\components\\packages-grid.tsx": {
-      "id": "(app-client)/./components/packages-grid.tsx",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\public\\projects\\tp-auction.png": {
-      "id": "(app-client)/./public/projects/tp-auction.png",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\public\\projects\\inner-light.png": {
-      "id": "(app-client)/./public/projects/inner-light.png",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\public\\projects\\twadini.png": {
-      "id": "(app-client)/./public/projects/twadini.png",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\public\\projects\\captain-twadini.png": {
-      "id": "(app-client)/./public/projects/captain-twadini.png",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\public\\projects\\hr-connect.png": {
-      "id": "(app-client)/./public/projects/hr-connect.png",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\public\\projects\\scotani.png": {
-      "id": "(app-client)/./public/projects/scotani.png",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\public\\projects\\vendi.png": {
-      "id": "(app-client)/./public/projects/vendi.png",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\public\\projects\\venus.png": {
-      "id": "(app-client)/./public/projects/venus.png",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\public\\projects\\beautyfixy.png": {
-      "id": "(app-client)/./public/projects/beautyfixy.png",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\public\\projects\\qpid-asia.png": {
-      "id": "(app-client)/./public/projects/qpid-asia.png",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\public\\projects\\ikwteat.png": {
-      "id": "(app-client)/./public/projects/ikwteat.png",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\public\\projects\\precision-wellness.png": {
-      "id": "(app-client)/./public/projects/precision-wellness.png",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\public\\projects\\stocker.png": {
-      "id": "(app-client)/./public/projects/stocker.png",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\public\\projects\\uv-schools.png": {
-      "id": "(app-client)/./public/projects/uv-schools.png",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\components\\projects.tsx": {
-      "id": "(app-client)/./components/projects.tsx",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\components\\section-bridge.tsx": {
-      "id": "(app-client)/./components/section-bridge.tsx",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\components\\section-divider.tsx": {
-      "id": "(app-client)/./components/section-divider.tsx",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\components\\skills.tsx": {
-      "id": "(app-client)/./components/skills.tsx",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\node_modules\\react-hot-toast\\dist\\index.mjs": {
-      "id": "(app-client)/./node_modules/react-hot-toast/dist/index.mjs",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\node_modules\\next\\font\\google\\target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Plus_Jakarta_Sans\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-body\",\"display\":\"swap\"}],\"variableName\":\"jakarta\"}": {
-      "id": "(app-client)/./node_modules/next/font/google/target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Plus_Jakarta_Sans\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-body\",\"display\":\"swap\"}],\"variableName\":\"jakarta\"}",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\node_modules\\next\\font\\google\\target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Syne\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-display\",\"display\":\"swap\"}],\"variableName\":\"syne\"}": {
-      "id": "(app-client)/./node_modules/next/font/google/target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Syne\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-display\",\"display\":\"swap\"}],\"variableName\":\"syne\"}",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
     "D:\\Web Development\\Portfolio Website\\components\\header.tsx": {
       "id": "(app-client)/./components/header.tsx",
       "name": "*",
@@ -621,22 +221,6 @@
     },
     "D:\\Web Development\\Portfolio Website\\components\\theme-switch.tsx": {
       "id": "(app-client)/./components/theme-switch.tsx",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\context\\active-section-context.tsx": {
-      "id": "(app-client)/./context/active-section-context.tsx",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "D:\\Web Development\\Portfolio Website\\context\\theme-context.tsx": {
-      "id": "(app-client)/./context/theme-context.tsx",
       "name": "*",
       "chunks": [
         "app/layout:static/chunks/app/layout.js"
@@ -667,6 +251,38 @@
       ],
       "async": false
     },
+    "D:\\Web Development\\Portfolio Website\\context\\active-section-context.tsx": {
+      "id": "(app-client)/./context/active-section-context.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\context\\theme-context.tsx": {
+      "id": "(app-client)/./context/theme-context.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\node_modules\\next\\font\\google\\target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Plus_Jakarta_Sans\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-body\",\"display\":\"swap\"}],\"variableName\":\"jakarta\"}": {
+      "id": "(app-client)/./node_modules/next/font/google/target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Plus_Jakarta_Sans\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-body\",\"display\":\"swap\"}],\"variableName\":\"jakarta\"}",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\node_modules\\next\\font\\google\\target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Syne\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-display\",\"display\":\"swap\"}],\"variableName\":\"syne\"}": {
+      "id": "(app-client)/./node_modules/next/font/google/target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Syne\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-display\",\"display\":\"swap\"}],\"variableName\":\"syne\"}",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
     "D:\\Web Development\\Portfolio Website\\app\\globals.css": {
       "id": "(app-client)/./app/globals.css",
       "name": "*",
@@ -674,12 +290,85 @@
         "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\node_modules\\react-hot-toast\\dist\\index.mjs": {
+      "id": "(app-client)/./node_modules/react-hot-toast/dist/index.mjs",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
+      "name": "*",
+      "chunks": [
+        "app/email-preview/page:static/chunks/app/email-preview/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
+      "name": "*",
+      "chunks": [
+        "app/email-preview/page:static/chunks/app/email-preview/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/hooks-client-context.js",
+      "name": "*",
+      "chunks": [
+        "app/email-preview/page:static/chunks/app/email-preview/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/hooks-client-context.js",
+      "name": "*",
+      "chunks": [
+        "app/email-preview/page:static/chunks/app/email-preview/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/server-inserted-html.js",
+      "name": "*",
+      "chunks": [
+        "app/email-preview/page:static/chunks/app/email-preview/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/server-inserted-html.js",
+      "name": "*",
+      "chunks": [
+        "app/email-preview/page:static/chunks/app/email-preview/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\node_modules\\next\\dist\\shared\\lib\\lazy-dynamic\\dynamic-no-ssr.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/lazy-dynamic/dynamic-no-ssr.js",
+      "name": "*",
+      "chunks": [
+        "app/email-preview/page:static/chunks/app/email-preview/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\node_modules\\next\\dist\\esm\\shared\\lib\\lazy-dynamic\\dynamic-no-ssr.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/lazy-dynamic/dynamic-no-ssr.js",
+      "name": "*",
+      "chunks": [
+        "app/email-preview/page:static/chunks/app/email-preview/page.js"
+      ],
+      "async": false
     }
   },
   "entryCSSFiles": {
-    "D:\\Web Development\\Portfolio Website\\app\\page": [],
     "D:\\Web Development\\Portfolio Website\\app\\layout": [
       "static/css/app/layout.css"
-    ]
+    ],
+    "D:\\Web Development\\Portfolio Website\\app\\email-preview\\page": [],
+    "D:\\Web Development\\Portfolio Website\\app\\email-preview\\layout": []
   }
 }

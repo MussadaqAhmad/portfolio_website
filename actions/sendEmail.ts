@@ -6,9 +6,15 @@ import { validateString, getErrorMessage } from "@/lib/utils";
 import ContactFormEmail from "@/email/contact-form-email";
 
 export const sendEmail = async (formData: FormData) => {
+  const senderName = formData.get("senderName");
   const senderEmail = formData.get("senderEmail");
   const message = formData.get("message");
 
+  if (!validateString(senderName, 100) || !senderName.trim()) {
+    return {
+      error: "Invalid sender name",
+    };
+  }
   if (
     !validateString(senderEmail, 500) ||
     !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(senderEmail.trim())
@@ -26,8 +32,11 @@ export const sendEmail = async (formData: FormData) => {
   const apiKey = process.env.RESEND_API_KEY;
   const contactEmail =
     process.env.CONTACT_EMAIL || "mussadaq900@gmail.com";
-  const fromEmail =
+  const configuredFromEmail =
     process.env.RESEND_FROM_EMAIL || "Portfolio <onboarding@resend.dev>";
+  const configuredFromAddress =
+    configuredFromEmail.match(/<([^<>]+)>$/)?.[1] || configuredFromEmail;
+  const fromEmail = `Mussadaq Ahmad Portfolio <${configuredFromAddress.trim()}>`;
 
   if (!apiKey) {
     console.error("RESEND_API_KEY is not configured.");
@@ -37,6 +46,7 @@ export const sendEmail = async (formData: FormData) => {
   }
 
   const resend = new Resend(apiKey);
+  const cleanSenderName = senderName.trim();
   const cleanSenderEmail = senderEmail.trim();
   const cleanMessage = message.trim();
 
@@ -45,11 +55,12 @@ export const sendEmail = async (formData: FormData) => {
     data = await resend.emails.send({
       from: fromEmail,
       to: contactEmail,
-      subject: `New portfolio message from ${cleanSenderEmail}`,
+      subject: `Client enquiry · ${cleanSenderEmail}`,
       reply_to: cleanSenderEmail,
       react: React.createElement(ContactFormEmail, {
+        name: cleanSenderName,
+        email: cleanSenderEmail,
         message: cleanMessage,
-        senderEmail: cleanSenderEmail,
       }),
     });
   } catch (error: unknown) {

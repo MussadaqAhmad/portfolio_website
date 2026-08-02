@@ -64,16 +64,26 @@ export default function Contact() {
       >
         <input
           className="field h-14 rounded-lg px-4"
+          name="senderName"
+          type="text"
+          required
+          maxLength={100}
+          autoComplete="name"
+          placeholder="Name"
+        />
+        <input
+          className="field mt-3 h-14 rounded-lg px-4"
           name="senderEmail"
           type="email"
           required
           maxLength={500}
-          placeholder="Your email"
+          autoComplete="email"
+          placeholder="Email"
         />
         <textarea
           className="field my-3 h-52 rounded-lg p-4"
           name="message"
-          placeholder="Your message"
+          placeholder="Message"
           required
           maxLength={5000}
         />
