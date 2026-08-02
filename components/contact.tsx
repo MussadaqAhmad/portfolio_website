@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef } from "react";
 import SectionHeader from "@/components/ui/section-header";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
@@ -10,6 +11,7 @@ import { duration, ease, spring, viewportEnter } from "@/lib/motion";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
+  const formRef = useRef<HTMLFormElement>(null);
 
   return (
     <motion.section
@@ -46,6 +48,7 @@ export default function Contact() {
       </motion.p>
 
       <motion.form
+        ref={formRef}
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={viewportEnter}
@@ -59,6 +62,7 @@ export default function Contact() {
             return;
           }
 
+          formRef.current?.reset();
           toast.success("Email sent successfully!");
         }}
       >
