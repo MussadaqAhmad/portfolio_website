@@ -22,10 +22,10 @@ export default function Certifications() {
       <SectionHeader
         eyebrow="Credentials"
         title="Certifications"
-        tagline="Learning Milestones!"
+        tagline="Verified Credentials!"
       >
-        Formal training and competition milestones that shaped how I approach
-        mobile engineering.
+        Formal certifications that shaped how I approach mobile engineering and
+        delivery.
       </SectionHeader>
 
       <motion.ul
@@ -39,14 +39,14 @@ export default function Certifications() {
           <motion.li key={cert.title} variants={staggerItem} className="list-none">
             <Tilt maxTilt={6} className="h-full overflow-hidden rounded-2xl">
               <article className="glass-surface glass-border-glow flex h-full flex-col overflow-hidden rounded-2xl">
-              <div className="relative flex aspect-[16/9] items-center justify-center overflow-hidden border-b border-[color:var(--glass-border)] bg-[linear-gradient(135deg,rgba(var(--accent-rgb),0.14),rgba(var(--accent-secondary-rgb),0.07))]">
+              <div className="relative flex aspect-[16/10] items-center justify-center overflow-hidden border-b border-[color:var(--glass-border)] bg-[color:rgba(var(--accent-rgb),0.06)]">
                 {cert.image ? (
                   <Image
                     src={cert.image}
                     alt={`${cert.title} certificate issued by ${cert.issuer}`}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover"
+                    className="object-cover object-center"
                   />
                 ) : (
                   <span

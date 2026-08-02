@@ -1,4 +1,12 @@
 # Node.js
 node_modules/
 
+# Next.js build output
+.next/
+
+# Local environment secrets
+.env
+.env.local
+.env.*.local
+
 .git

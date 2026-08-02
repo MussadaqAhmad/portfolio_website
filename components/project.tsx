@@ -113,7 +113,7 @@ export default function Project({
             fill
             quality={90}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="scale-[1.02] object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.08]"
+            className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03]"
           />
 
           <div className="card-overlay">

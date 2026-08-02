@@ -1,9 +1,20 @@
 import React from "react";
 import type { StaticImageData } from "next/image";
 import { CgWorkAlt } from "react-icons/cg";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import tpAuctionImg from "@/public/projects/tp-auction.png";
+import innerLightImg from "@/public/projects/inner-light.png";
+import twadiniImg from "@/public/projects/twadini.png";
+import captainTwadiniImg from "@/public/projects/captain-twadini.png";
+import hrConnectImg from "@/public/projects/hr-connect.png";
+import scotaniImg from "@/public/projects/scotani.png";
+import vendiImg from "@/public/projects/vendi.png";
+import venusImg from "@/public/projects/venus.png";
+import beautyFixyImg from "@/public/projects/beautyfixy.png";
+import qpidAsiaImg from "@/public/projects/qpid-asia.png";
+import ikwteatImg from "@/public/projects/ikwteat.png";
+import precisionWellnessImg from "@/public/projects/precision-wellness.png";
+import stockerImg from "@/public/projects/stocker.png";
+import uvSchoolsImg from "@/public/projects/uv-schools.png";
 
 export const links = [
   {
@@ -82,18 +93,19 @@ export const experiencesData = [
     location: "Lahore, Pakistan · On-site",
     date: "Aug 2022 – Oct 2024",
     highlights: [
-      "Delivered multiple concurrent Flutter applications for iOS and Android on schedule by leading a team of developers and maintaining high coding standards across releases.",
+      "Delivered multiple concurrent Flutter and React Native applications for iOS and Android on schedule by leading a team of developers and maintaining high coding standards across releases.",
+      "Built and shipped React Native features and screens with reusable components, bridging native modules where needed for platform-specific functionality.",
       "Increased project delivery speed by 20% by implementing an Agile/Scrum sprint framework with Jira-based tracking across cross-functional teams.",
       "Reduced bug incidence by 15% by introducing a systematic code review process, improving overall release stability.",
       "Improved cross-team API performance and reduced integration errors by authoring structured JSON API documentation for backend development.",
       "Cut project timeline overruns by 10% by partnering with project managers on accurate technical estimation and proactive status reporting.",
       "Streamlined iOS release cycles by managing end-to-end App Store and TestFlight deployment pipelines.",
-      "Increased user engagement by 25% by partnering with design and product teams to design and ship new Flutter features.",
+      "Increased user engagement by 25% by partnering with design and product teams to design and ship new Flutter and React Native features.",
       "Owned the full development lifecycle from planning through deployment across cross-functional product initiatives, ensuring consistent alignment with business goals.",
     ],
     skills: [
       "Flutter",
-      "Dart",
+      "React Native",
       "Agile/Scrum",
       "Jira",
       "REST APIs",
@@ -153,13 +165,12 @@ export const projectsData: readonly ProjectItem[] = [
       "A luxury auction platform with a dynamic bidding system, expert-verified listings, seamless seller onboarding, and secure payments via Total Processing.",
     tags: [
       "Flutter",
-      "Firebase",
       "Socket.IO",
       "WebSockets",
       "REST APIs",
       "Deep Linking",
     ],
-    imageUrl: corpcommentImg,
+    imageUrl: tpAuctionImg,
     playStoreUrl:
       "https://play.google.com/store/apps/details?id=com.app.tpauctions",
   },
@@ -168,69 +179,39 @@ export const projectsData: readonly ProjectItem[] = [
     description:
       "A health management platform with intuitive lab result dashboards, GPT-4o-powered AI wellness guidance, real-time chat with care providers, manual health tracking, and wearable integrations.",
     tags: [
-      "Flutter",
-      "Firebase",
+      "React Native",
       "OpenAI GPT-4o",
       "Terra API",
       "Real-Time Chat",
+      "REST APIs",
     ],
-    imageUrl: rmtdevImg,
+    imageUrl: precisionWellnessImg,
     playStoreUrl:
       "https://play.google.com/store/apps/details?id=com.prcnhealth",
   },
   {
-    title: "Inner Light Academy",
+    title: "UVSchools",
     description:
-      "A wellness app with spiritual courses, meditation, audio/video integration, dynamic booking, and secure payments via PayPal, Stripe, and Tap Pay.",
+      "A parent–school management app for tracking attendance, exam results, daily lessons, fees, and behavior evaluations, with one-tap access to live online classes.",
     tags: [
-      "Flutter",
-      "Firebase",
-      "Subscriptions",
+      "Android",
+      "Kotlin",
       "REST APIs",
-      "PayPal",
-      "Stripe",
+      "Push Notifications",
+      "Education",
     ],
-    imageUrl: rmtdevImg,
+    imageUrl: uvSchoolsImg,
     playStoreUrl:
-      "https://play.google.com/store/apps/details?id=com.arhamsoft.innerlight.innerlights",
-  },
-  {
-    title: "Twadini",
-    description:
-      "A multi-service ride app for bookings, deliveries, rentals, and flights, with real-time tracking, secure OTP login, and Google Maps integration.",
-    tags: ["Flutter", "Firebase", "Google Maps", "REST APIs", "SQLite"],
-    imageUrl: wordanalyticsImg,
-    // App Store id1636702377 is delisted — restore appStoreUrl if it returns.
-  },
-  {
-    title: "Captain Twadini",
-    description:
-      "A driver app for trip management, real-time updates, secure OTP login, and Google Maps-based routing with an enhanced UI.",
-    tags: [
-      "Flutter",
-      "Firebase Real Time Database",
-      "Real Time Tracking",
-      "REST APIs",
-    ],
-    imageUrl: corpcommentImg,
-    // App Store id1645796935 is delisted — restore appStoreUrl if it returns.
+      "https://play.google.com/store/apps/details?id=com.khsofdev.student.parent.uvschools",
   },
   {
     title: "HR Connect",
     description:
       "An employee management app with GPS-based attendance, salary tracking, tax details, and multi-company support via tenant ID.",
-    tags: ["Flutter", "Firebase", "GPS Attendance", "REST APIs", "File Saving"],
-    imageUrl: rmtdevImg,
+    tags: ["iOS", "Swift", "GPS Attendance", "REST APIs", "File Saving"],
+    imageUrl: hrConnectImg,
     playStoreUrl:
       "https://play.google.com/store/apps/details?id=pk.hrconnect.app",
-  },
-  {
-    title: "Scotani",
-    description:
-      "An AI-powered tattoo design app using DALL-E, with customization features, order tracking, and secure payments via PayPal and Stripe.",
-    tags: ["Flutter", "DALL-E", "Google Maps", "REST APIs", "E-Commerce"],
-    imageUrl: wordanalyticsImg,
-    // App Store id6472646348 is delisted — restore appStoreUrl if it returns.
   },
   {
     title: "Stocker",
@@ -243,7 +224,7 @@ export const projectsData: readonly ProjectItem[] = [
       "In-App Purchases",
       "Subscriptions",
     ],
-    imageUrl: corpcommentImg,
+    imageUrl: stockerImg,
     appStoreUrl:
       "https://apps.apple.com/pk/app/ai-stock-scanner-analysis/id6443543680",
   },
@@ -252,13 +233,13 @@ export const projectsData: readonly ProjectItem[] = [
     description:
       "An order management app with offline support, tax calculations, daily sync, and geo-tagging for enhanced tracking and performance.",
     tags: [
-      "Flutter",
+      "React Native",
       "SQLite",
       "Google Maps",
       "Offline Data Sync",
       "REST APIs",
     ],
-    imageUrl: rmtdevImg,
+    imageUrl: vendiImg,
     playStoreUrl:
       "https://play.google.com/store/apps/details?id=pk.vendi.orderbooker",
   },
@@ -267,37 +248,82 @@ export const projectsData: readonly ProjectItem[] = [
     description:
       "A pregnancy, birth, and postnatal education app with educational video content, midwife chat, and a user interaction forum.",
     tags: [
-      "Flutter",
-      "SQLite",
+      "iOS",
+      "Swift",
       "Video Player",
       "Firebase",
       "Subscriptions",
     ],
-    imageUrl: wordanalyticsImg,
+    imageUrl: venusImg,
     playStoreUrl:
       "https://play.google.com/store/apps/details?id=com.finjineer.venus",
   },
   {
-    title: "BeautyFixy",
-    description:
-      "A SaaS platform where multiple marketplace businesses and professionals can showcase their work, with online booking across beauty, cafe, fitness, laundry, and cleaning services.",
-    tags: ["Flutter", "SQLite", "Firebase", "Subscriptions", "E-Commerce"],
-    imageUrl: corpcommentImg,
-  },
-  {
     title: "Qpid Asia",
     description:
-      "A Flutter and Dart-based dating app with live streams, real-time chat, audio/video calls, and a gift shop for meaningful romantic connections.",
+      "A React Native dating app with live streams, real-time chat, audio/video calls, and a gift shop for meaningful romantic connections.",
     tags: [
-      "Flutter",
+      "React Native",
       "SQLite",
       "Video Player",
       "Firebase",
       "In-App Purchases",
     ],
-    imageUrl: rmtdevImg,
+    imageUrl: qpidAsiaImg,
     playStoreUrl:
       "https://play.google.com/store/apps/details?id=com.finjineers.qpidasia",
+  },
+  {
+    title: "Inner Light Academy",
+    description:
+      "A wellness app with spiritual courses, meditation, audio/video integration, dynamic booking, and secure payments via PayPal, Stripe, and Tap Pay.",
+    tags: [
+      "Flutter",
+      "Subscriptions",
+      "REST APIs",
+      "PayPal",
+      "Stripe",
+    ],
+    imageUrl: innerLightImg,
+    playStoreUrl:
+      "https://play.google.com/store/apps/details?id=com.arhamsoft.innerlight.innerlights",
+  },
+  {
+    title: "Twadini",
+    description:
+      "A multi-service ride app for bookings, deliveries, rentals, and flights, with real-time tracking, secure OTP login, and Google Maps integration.",
+    tags: ["Android", "Kotlin", "Google Maps", "REST APIs", "SQLite"],
+    imageUrl: twadiniImg,
+    // App Store id1636702377 is delisted — restore appStoreUrl if it returns.
+  },
+  {
+    title: "Captain Twadini",
+    description:
+      "A driver app for trip management, real-time updates, secure OTP login, and Google Maps-based routing with an enhanced UI.",
+    tags: [
+      "iOS",
+      "Swift",
+      "Real Time Tracking",
+      "REST APIs",
+      "Google Maps",
+    ],
+    imageUrl: captainTwadiniImg,
+    // App Store id1645796935 is delisted — restore appStoreUrl if it returns.
+  },
+  {
+    title: "Scotani",
+    description:
+      "An AI-powered tattoo design app using DALL-E, with customization features, order tracking, and secure payments via PayPal and Stripe.",
+    tags: ["React Native", "DALL-E", "Google Maps", "REST APIs", "E-Commerce"],
+    imageUrl: scotaniImg,
+    // App Store id6472646348 is delisted — restore appStoreUrl if it returns.
+  },
+  {
+    title: "BeautyFixy",
+    description:
+      "A SaaS platform where multiple marketplace businesses and professionals can showcase their work, with online booking across beauty, cafe, fitness, laundry, and cleaning services.",
+    tags: ["Android", "Kotlin", "Firebase", "Subscriptions", "E-Commerce"],
+    imageUrl: beautyFixyImg,
   },
   {
     title: "IKWTEAT",
@@ -310,7 +336,7 @@ export const projectsData: readonly ProjectItem[] = [
       "Internationalization",
       "REST APIs",
     ],
-    imageUrl: wordanalyticsImg,
+    imageUrl: ikwteatImg,
   },
 ];
 
@@ -364,24 +390,24 @@ export type Certification = {
 export const certificationsData: readonly Certification[] = [
   {
     title: "Mobile App Development",
-    issuer: "Techlift (GC-IT) Bootcamp",
-    date: "Aug 2021",
+    issuer: "TechLift · Contour Software",
+    date: "Jan 2022",
     credentialUrl: null,
-    image: null,
+    image: "/certifications/techlift-flutter.png",
   },
   {
-    title: "BS Software Engineering",
-    issuer: "Riphah International University",
-    date: "2017 – 2021",
+    title: "Agile Project Management",
+    issuer: "HP LIFE",
+    date: "Mar 2025",
     credentialUrl: null,
-    image: null,
+    image: "/certifications/agile-project-management.png",
   },
   {
-    title: "Speed Programming — DAIRA'18",
-    issuer: "FAST-NU",
-    date: "2018",
+    title: "Flutter Engineer",
+    issuer: "Pro5.ai",
+    date: "Aug 2024",
     credentialUrl: null,
-    image: null,
+    image: "/certifications/flutter-engineer.png",
   },
 ];
 

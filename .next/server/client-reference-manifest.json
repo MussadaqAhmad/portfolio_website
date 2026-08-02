@@ -88,25 +88,113 @@
         "async": false
       }
     },
-    "(app-client)/./public/corpcomment.png": {
+    "(app-client)/./public/projects/tp-auction.png": {
       "*": {
-        "id": "(sc_client)/./public/corpcomment.png",
+        "id": "(sc_client)/./public/projects/tp-auction.png",
         "name": "*",
         "chunks": [],
         "async": false
       }
     },
-    "(app-client)/./public/rmtdev.png": {
+    "(app-client)/./public/projects/inner-light.png": {
       "*": {
-        "id": "(sc_client)/./public/rmtdev.png",
+        "id": "(sc_client)/./public/projects/inner-light.png",
         "name": "*",
         "chunks": [],
         "async": false
       }
     },
-    "(app-client)/./public/wordanalytics.png": {
+    "(app-client)/./public/projects/twadini.png": {
       "*": {
-        "id": "(sc_client)/./public/wordanalytics.png",
+        "id": "(sc_client)/./public/projects/twadini.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./public/projects/captain-twadini.png": {
+      "*": {
+        "id": "(sc_client)/./public/projects/captain-twadini.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./public/projects/hr-connect.png": {
+      "*": {
+        "id": "(sc_client)/./public/projects/hr-connect.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./public/projects/scotani.png": {
+      "*": {
+        "id": "(sc_client)/./public/projects/scotani.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./public/projects/vendi.png": {
+      "*": {
+        "id": "(sc_client)/./public/projects/vendi.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./public/projects/venus.png": {
+      "*": {
+        "id": "(sc_client)/./public/projects/venus.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./public/projects/beautyfixy.png": {
+      "*": {
+        "id": "(sc_client)/./public/projects/beautyfixy.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./public/projects/qpid-asia.png": {
+      "*": {
+        "id": "(sc_client)/./public/projects/qpid-asia.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./public/projects/ikwteat.png": {
+      "*": {
+        "id": "(sc_client)/./public/projects/ikwteat.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./public/projects/precision-wellness.png": {
+      "*": {
+        "id": "(sc_client)/./public/projects/precision-wellness.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./public/projects/stocker.png": {
+      "*": {
+        "id": "(sc_client)/./public/projects/stocker.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./public/projects/uv-schools.png": {
+      "*": {
+        "id": "(sc_client)/./public/projects/uv-schools.png",
         "name": "*",
         "chunks": [],
         "async": false
@@ -347,24 +435,112 @@
       ],
       "async": false
     },
-    "D:\\Web Development\\Portfolio Website\\public\\corpcomment.png": {
-      "id": "(app-client)/./public/corpcomment.png",
+    "D:\\Web Development\\Portfolio Website\\public\\projects\\tp-auction.png": {
+      "id": "(app-client)/./public/projects/tp-auction.png",
       "name": "*",
       "chunks": [
         "app/page:static/chunks/app/page.js"
       ],
       "async": false
     },
-    "D:\\Web Development\\Portfolio Website\\public\\rmtdev.png": {
-      "id": "(app-client)/./public/rmtdev.png",
+    "D:\\Web Development\\Portfolio Website\\public\\projects\\inner-light.png": {
+      "id": "(app-client)/./public/projects/inner-light.png",
       "name": "*",
       "chunks": [
         "app/page:static/chunks/app/page.js"
       ],
       "async": false
     },
-    "D:\\Web Development\\Portfolio Website\\public\\wordanalytics.png": {
-      "id": "(app-client)/./public/wordanalytics.png",
+    "D:\\Web Development\\Portfolio Website\\public\\projects\\twadini.png": {
+      "id": "(app-client)/./public/projects/twadini.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\public\\projects\\captain-twadini.png": {
+      "id": "(app-client)/./public/projects/captain-twadini.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\public\\projects\\hr-connect.png": {
+      "id": "(app-client)/./public/projects/hr-connect.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\public\\projects\\scotani.png": {
+      "id": "(app-client)/./public/projects/scotani.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\public\\projects\\vendi.png": {
+      "id": "(app-client)/./public/projects/vendi.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\public\\projects\\venus.png": {
+      "id": "(app-client)/./public/projects/venus.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\public\\projects\\beautyfixy.png": {
+      "id": "(app-client)/./public/projects/beautyfixy.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\public\\projects\\qpid-asia.png": {
+      "id": "(app-client)/./public/projects/qpid-asia.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\public\\projects\\ikwteat.png": {
+      "id": "(app-client)/./public/projects/ikwteat.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\public\\projects\\precision-wellness.png": {
+      "id": "(app-client)/./public/projects/precision-wellness.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\public\\projects\\stocker.png": {
+      "id": "(app-client)/./public/projects/stocker.png",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "D:\\Web Development\\Portfolio Website\\public\\projects\\uv-schools.png": {
+      "id": "(app-client)/./public/projects/uv-schools.png",
       "name": "*",
       "chunks": [
         "app/page:static/chunks/app/page.js"
